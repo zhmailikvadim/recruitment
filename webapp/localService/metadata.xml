@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:Reference Uri="./sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZHR_C_CANDIDATEHEADER_CDS" xml:lang="ru" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="ZHR_C_CANDIDATEHEADERType" sap:label="Person Header Consumption" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="uuid"/>
+                </Key>
+                <Property Name="uuid" Type="Edm.Guid" Nullable="false" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
+                <Property Name="uname" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Автор изменения" sap:quickinfo="Имя исполнителя, изменившего объект"/>
+                <Property Name="histo" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Запись в историю" sap:quickinfo="Индикатор записи в историю"/>
+                <Property Name="itxex" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Текст существует" sap:quickinfo="Текст для инфо-типа существует"/>
+                <Property Name="refex" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Ссылка есть" sap:quickinfo="Существуют ссылочные поля (первичные/вторичные затраты)"/>
+                <Property Name="ordex" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="ПодтвержденСуществ" sap:quickinfo="Поля подтверждения существуют"/>
+                <Property Name="itbld" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="УправлЭкранами" sap:quickinfo="Управление экранами инфо-типа"/>
+                <Property Name="preas" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Причина изменения" sap:quickinfo="Причина изменения основных данных"/>
+                <Property Name="flag1" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Резервное поле/неиспользуемое поле"/>
+                <Property Name="flag2" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Резервное поле/неиспользуемое поле"/>
+                <Property Name="flag3" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Резервное поле/неиспользуемое поле"/>
+                <Property Name="pernr" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Номер кандидата"/>
+                <Property Name="flag4" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Резервное поле/неиспользуемое поле"/>
+                <Property Name="rese1" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Резервное поле/неиспользуемое поле - длина 2"/>
+                <Property Name="rese2" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Резервное поле/неиспользуемое поле - длина 2"/>
+                <Property Name="grpvl" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Значение группировки" sap:quickinfo="Значение группировки для трудовых договоров"/>
+                <Property Name="inits" Type="Edm.String" MaxLength="10" sap:label="Инициалы"/>
+                <Property Name="nachn" Type="Edm.String" MaxLength="40" sap:label="Фамилия"/>
+                <Property Name="name2" Type="Edm.String" MaxLength="40" sap:label="Фамилия при рождении"/>
+                <Property Name="nach2" Type="Edm.String" MaxLength="40" sap:label="Отчество"/>
+                <Property Name="vorna" Type="Edm.String" MaxLength="40" sap:label="Имя"/>
+                <Property Name="cname" Type="Edm.String" MaxLength="80" sap:label="Полное имя"/>
+                <Property Name="subty" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Подтип"/>
+                <Property Name="titel" Type="Edm.String" MaxLength="15" sap:label="Ученая степень"/>
+                <Property Name="titl2" Type="Edm.String" MaxLength="15" sap:label="УчСтеп2" sap:quickinfo="Вторая ученая степень"/>
+                <Property Name="namzu" Type="Edm.String" MaxLength="15" sap:label="Дополнение к имени"/>
+                <Property Name="vorsw" Type="Edm.String" MaxLength="15" sap:label="Префикс"/>
+                <Property Name="vors2" Type="Edm.String" MaxLength="15" sap:label="Префикс 2" sap:quickinfo="Второй префикс"/>
+                <Property Name="rufnm" Type="Edm.String" MaxLength="40" sap:label="Основное имя"/>
+                <Property Name="midnm" Type="Edm.String" MaxLength="40" sap:label="Отчество"/>
+                <Property Name="knznm" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="ИндикатФорматИмени" sap:quickinfo="Индикатор форматирования имени сотрудника в списке"/>
+                <Property Name="anred" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Ключ обращения"/>
+                <Property Name="gesch" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Пол" sap:quickinfo="Ключ пола"/>
+                <Property Name="objps" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Ид. объекта" sap:quickinfo="Идентификатор объекта"/>
+                <Property Name="gbdat" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата рождения"/>
+                <Property Name="gblnd" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Страна рождения"/>
+                <Property Name="gbdep" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Область, край"/>
+                <Property Name="gbort" Type="Edm.String" MaxLength="40" sap:label="Место рождения"/>
+                <Property Name="natio" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Гражданство"/>
+                <Property Name="nati2" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Другая госпринадлеж." sap:quickinfo="Вторая гос. принадлежность"/>
+                <Property Name="nati3" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="2-ая/3-я госпринадл." sap:quickinfo="Третья гос. принадлежность"/>
+                <Property Name="sprsl" Type="Edm.String" MaxLength="2" sap:label="Язык коммуникации"/>
+                <Property Name="konfe" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Вероисповедание" sap:quickinfo="Ключ вероисповедания"/>
+                <Property Name="famst" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Семейное положение" sap:quickinfo="Ключ для семейного положения"/>
+                <Property Name="sprps" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Инд. блокирования" sap:quickinfo="Индикатор блокирования для основной записи сотрудника"/>
+                <Property Name="famdt" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Семейное положение с" sap:quickinfo="Начало действия актуального семейного положения"/>
+                <Property Name="anzkd" Type="Edm.Decimal" Precision="3" Scale="0" sap:label="Количество детей"/>
+                <Property Name="nacon" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Conexiѓn nombres" sap:quickinfo="Conexiѓn de nombres"/>
+                <Property Name="permo" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="МодифИдПерсонала" sap:quickinfo="Модификатор для идентификатора персонала"/>
+                <Property Name="perid" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="ИНС" sap:quickinfo="Идентификационный номер сотрудника"/>
+                <Property Name="gbpas" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата рождения" sap:quickinfo="Дата рождения согласно паспорту"/>
+                <Property Name="fnamk" Type="Edm.String" MaxLength="40" sap:label="Имя (катакана)"/>
+                <Property Name="lnamk" Type="Edm.String" MaxLength="40" sap:label="Только для Японии" sap:quickinfo="Релевантно только для Японии"/>
+                <Property Name="fnamr" Type="Edm.String" MaxLength="40" sap:label="Имя (ромадзи)"/>
+                <Property Name="lnamr" Type="Edm.String" MaxLength="40" sap:label="Фамилия"/>
+                <Property Name="endda" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Действ. по" sap:quickinfo="Конец срока действия"/>
+                <Property Name="nabik" Type="Edm.String" MaxLength="40" sap:label="Фамилия при рождении"/>
+                <Property Name="nabir" Type="Edm.String" MaxLength="40" sap:label="Фамилия при рождении"/>
+                <Property Name="nickk" Type="Edm.String" MaxLength="40" sap:label="Koseki (катакана)"/>
+                <Property Name="nickr" Type="Edm.String" MaxLength="40" sap:label="Koseki (ромадзи)"/>
+                <Property Name="gbjhr" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Год рождения"/>
+                <Property Name="gbmon" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="Месяц рождения"/>
+                <Property Name="gbtag" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="День рождения" sap:quickinfo="День рождения (в пределах одного месяца/года)"/>
+                <Property Name="nchmc" Type="Edm.String" MaxLength="25" sap:display-format="UpperCase" sap:label="Фамилия" sap:quickinfo="Фамилия (поле для средства поиска)"/>
+                <Property Name="vnamc" Type="Edm.String" MaxLength="25" sap:display-format="UpperCase" sap:label="Имя" sap:quickinfo="Имя (поле для средства поиска)"/>
+                <Property Name="namz2" Type="Edm.String" MaxLength="15" sap:label="Дополн. к имени 2" sap:quickinfo="Дополнение к имени, полученному при рождении"/>
+                <Property Name="begda" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Действ. с" sap:quickinfo="Начало срока действия"/>
+                <Property Name="seqnr" Type="Edm.String" MaxLength="3" sap:display-format="NonNegative" sap:label="ИнфоТип-№Записи" sap:quickinfo="Номер записи инфо-типа с таким же ключом"/>
+                <Property Name="aedtm" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата изменения" sap:quickinfo="Дата последнего изменения"/>
+            </EntityType>
+            <EntityContainer Name="ZHR_C_CANDIDATEHEADER_CDS_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="ZHR_C_CANDIDATEHEADER" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" sap:content-version="1"/>
+            </EntityContainer>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.SemanticKey">
+                    <Collection>
+                        <PropertyPath>uuid</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <atom:link rel="self" href="http://SAPBPC-DEV.BELOIL.BY:80/sap/opu/odata/sap/ZHR_C_CANDIDATEHEADER_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://SAPBPC-DEV.BELOIL.BY:80/sap/opu/odata/sap/ZHR_C_CANDIDATEHEADER_CDS/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
