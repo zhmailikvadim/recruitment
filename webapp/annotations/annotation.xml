@@ -19,12 +19,17 @@
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ADDRESS"/>
                             <PropertyValue Property="Label" String="Адрес"/>
                             <PropertyValue Property="ID" String="ADDRESS"/>
-                        </Record>   
+                        </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#CONTACTS"/>
                             <PropertyValue Property="Label" String="Контакты"/>
                             <PropertyValue Property="ID" String="CONTACTS"/>
-                        </Record>                                             
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateEducation/@UI.LineItem"/>
+                            <PropertyValue Property="Label" String="Образование"/>
+                            <PropertyValue Property="ID" String="EDUC"/>
+                        </Record>
                     </Collection>
                 </Annotation>
             </Annotations>
