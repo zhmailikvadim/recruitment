@@ -320,7 +320,7 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="Вид Образования"/>
                             <PropertyValue Property="Value" Path="education_type"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
                         </Record>
                     </Collection>
                 </Annotation>

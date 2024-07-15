@@ -111,7 +111,7 @@
                 <Property Name="ort01f" Type="Edm.String" MaxLength="40" sap:label="Город"/>
                 <Property Name="statef" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Область" sap:quickinfo="Регион (штат, федер. земля, провинция, область, графство)"/>
                 <Property Name="strasf" Type="Edm.String" MaxLength="60" sap:label="Улица" sap:quickinfo="Улица и номер дома"/>
-                <Property Name="hsnmrf" Type="Edm.String" MaxLength="6" sap:label="Дом: Корпус: Квартира" sap:quickinfo="Номер дома"/>
+                <Property Name="hsnmrf" Type="Edm.String" MaxLength="6" sap:label="Дом: Корпус: Квартира1" sap:quickinfo="Номер дома"/>
                 <Property Name="education_type" Type="Edm.String" MaxLength="50" sap:label="Вид Образования" sap:quickinfo="Комментарий"/>
                 <Property Name="comp_level" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative" sap:text="to_ComputerLevelVH/Description" sap:label="Уровень владения ПК" sap:quickinfo="Num1" sap:value-list="standard"/>
                 <Property Name="comp_programs" Type="Edm.String" MaxLength="200" sap:display-format="UpperCase" sap:label="Какими программами владеете" sap:quickinfo="Поле текста, длина 200"/>
