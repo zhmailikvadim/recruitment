@@ -41,7 +41,7 @@
                                                 <Record Type="UI.ReferenceFacet">
                                                     <PropertyValue Property="Target" AnnotationPath="to_CandidateEducation/@UI.LineItem"/>
                                                     <PropertyValue Property="Label" String="Образование"/>
-                                                    <PropertyValue Property="ID" String="EDUC"/>
+                                                    <PropertyValue Property="ID" String="EDUC1"/>
                                                 </Record>
                                             </Collection>
                                         </PropertyValue>
@@ -66,18 +66,6 @@
                             <PropertyValue Property="ID" String="ADDRESSF"/>
                         </Record>
                     </Collection>
-                </Annotation>
-                <Annotation Term="UI.FieldGroup" Qualifier="EDC">
-                    <Record Type="UI.FieldGroupType">
-                        <PropertyValue Property="Data">
-                            <Collection>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="hsnmrf"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                        <PropertyValue Property="Label" String="Вид образования"/>
-                    </Record>
                 </Annotation>
             </Annotations>
             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/comp_level">
