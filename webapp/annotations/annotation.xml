@@ -1,4 +1,7 @@
 <edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
+    </edmx:Reference>
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
         <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
     </edmx:Reference>
@@ -16,11 +19,6 @@
                             <PropertyValue Property="ID" String="FIO"/>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ADDRESS"/>
-                            <PropertyValue Property="Label" String="Адрес"/>
-                            <PropertyValue Property="ID" String="ADDRESS"/>
-                        </Record>
-                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#CONTACTS"/>
                             <PropertyValue Property="Label" String="Контакты"/>
                             <PropertyValue Property="ID" String="CONTACTS"/>
@@ -30,7 +28,42 @@
                             <PropertyValue Property="Label" String="Образование"/>
                             <PropertyValue Property="ID" String="EDUC"/>
                         </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#COMPLEVEL"/>
+                            <PropertyValue Property="Label" String="Владение компьютером "/>
+                            <PropertyValue Property="ID" String="COMPLEVEL"/>
+                        </Record>                        
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ADDRESS"/>
+                            <PropertyValue Property="Label" String="Адрес постоянной регистрации"/>
+                            <PropertyValue Property="ID" String="ADDRESS"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ADDRESSF"/>
+                            <PropertyValue Property="Label" String="Адрес фактического проживания"/>
+                            <PropertyValue Property="ID" String="ADDRESSF"/>
+                        </Record>
                     </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/comp_level">
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="Label" String="Уровень владения компьютером"/>
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_COMPUTER_LEVEL_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="comp_level"/>
+                                    <PropertyValue Property="ValueListProperty" String="Id"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Description"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
                 </Annotation>
             </Annotations>
         </Schema>

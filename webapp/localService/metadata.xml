@@ -56,7 +56,7 @@
                 <Property Name="grpvl" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Значение группировки" sap:quickinfo="Значение группировки для трудовых договоров"/>
                 <Property Name="inits" Type="Edm.String" MaxLength="10" sap:label="Инициалы"/>
                 <Property Name="nachn" Type="Edm.String" MaxLength="40" sap:label="Фамилия"/>
-                <Property Name="name2" Type="Edm.String" MaxLength="40" sap:label="Фамилия при рождении"/>
+                <Property Name="name2" Type="Edm.String" MaxLength="40" sap:label="Если изменились ФИО - укажите прежние" sap:quickinfo="Фамилия при рождении"/>
                 <Property Name="nach2" Type="Edm.String" MaxLength="40" sap:label="Отчество"/>
                 <Property Name="vorna" Type="Edm.String" MaxLength="40" sap:label="Имя"/>
                 <Property Name="cname" Type="Edm.String" MaxLength="80" sap:label="Полное имя"/>
@@ -87,7 +87,7 @@
                 <Property Name="anzkd" Type="Edm.Decimal" Precision="3" Scale="0" sap:label="Количество детей"/>
                 <Property Name="nacon" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Conexiѓn nombres" sap:quickinfo="Conexiѓn de nombres"/>
                 <Property Name="permo" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="МодифИдПерсонала" sap:quickinfo="Модификатор для идентификатора персонала"/>
-                <Property Name="perid" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="ИНС" sap:quickinfo="Идентификационный номер сотрудника"/>
+                <Property Name="perid" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Личный номер" sap:quickinfo="Идентификационный номер сотрудника"/>
                 <Property Name="gbpas" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата" sap:quickinfo="Поле типа DATS"/>
                 <Property Name="lnamr" Type="Edm.String" MaxLength="40" sap:label="Фамилия"/>
                 <Property Name="nabik" Type="Edm.String" MaxLength="40" sap:label="Фамилия при рождении"/>
@@ -99,14 +99,21 @@
                 <Property Name="nchmc" Type="Edm.String" MaxLength="25" sap:display-format="UpperCase" sap:label="Фамилия" sap:quickinfo="Фамилия (поле для средства поиска)"/>
                 <Property Name="vnamc" Type="Edm.String" MaxLength="25" sap:display-format="UpperCase" sap:label="Имя" sap:quickinfo="Имя (поле для средства поиска)"/>
                 <Property Name="namz2" Type="Edm.String" MaxLength="15" sap:label="Дополн. к имени 2" sap:quickinfo="Дополнение к имени, полученному при рождении"/>
-                <Property Name="stras" Type="Edm.String" MaxLength="60" sap:label="Улица/номер дома" sap:quickinfo="Улица и номер дома"/>
-                <Property Name="land1" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Страна" sap:quickinfo="Код страны"/>
+                <Property Name="stras" Type="Edm.String" MaxLength="60" sap:label="Улица" sap:quickinfo="Улица и номер дома"/>
+                <Property Name="land1" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Код страны"/>
                 <Property Name="state" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Область" sap:quickinfo="Регион (штат, федер. земля, провинция, область, графство)"/>
                 <Property Name="ort01" Type="Edm.String" MaxLength="40" sap:label="Город"/>
                 <Property Name="num01_email" Type="Edm.String" MaxLength="132" sap:display-format="UpperCase" sap:label="E-Mail" sap:quickinfo="Адрес электронной почты"/>
                 <Property Name="begda" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Действ. с" sap:quickinfo="Начало срока действия"/>
-                <Property Name="num02_phone1" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Личный телефон" sap:quickinfo="Номер связи"/>
+                <Property Name="num02_phone1" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Домашний телефон" sap:quickinfo="Номер связи"/>
                 <Property Name="num02_phone2" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:label="Мобильный телефон" sap:quickinfo="Номер связи"/>
+                <Property Name="hsnmr" Type="Edm.String" MaxLength="6" sap:label="Дом: Корпус: Квартира" sap:quickinfo="Номер дома"/>
+                <Property Name="ort01f" Type="Edm.String" MaxLength="40" sap:label="Город"/>
+                <Property Name="statef" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Область" sap:quickinfo="Регион (штат, федер. земля, провинция, область, графство)"/>
+                <Property Name="strasf" Type="Edm.String" MaxLength="60" sap:label="Улица" sap:quickinfo="Улица и номер дома"/>
+                <Property Name="hsnmrf" Type="Edm.String" MaxLength="6" sap:label="Дом: Корпус: Квартира" sap:quickinfo="Номер дома"/>
+                <Property Name="comp_level" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative" sap:text="to_ComputerLevelVH/Description" sap:label="Уровень владения ПК" sap:quickinfo="Num1" sap:value-list="standard"/>
+                <Property Name="comp_programs" Type="Edm.String" MaxLength="200" sap:display-format="UpperCase" sap:label="Какими программами владеете" sap:quickinfo="Поле текста, длина 200"/>
                 <Property Name="seqnr" Type="Edm.String" MaxLength="3" sap:display-format="NonNegative" sap:label="ИнфоТип-№Записи" sap:quickinfo="Номер записи инфо-типа с таким же ключом"/>
                 <Property Name="aedtm" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата изменения" sap:quickinfo="Дата последнего изменения"/>
                 <Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key"/>
@@ -118,6 +125,7 @@
                 <NavigationProperty Name="DraftAdministrativeData" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_F1D7B6237AE309C77B5F920FCC0983CF" FromRole="FromRole_assoc_F1D7B6237AE309C77B5F920FCC0983CF" ToRole="ToRole_assoc_F1D7B6237AE309C77B5F920FCC0983CF"/>
                 <NavigationProperty Name="SiblingEntity" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_1AAC87C5A1D1BBA6066D2C8B98947DCC" FromRole="FromRole_assoc_1AAC87C5A1D1BBA6066D2C8B98947DCC" ToRole="ToRole_assoc_1AAC87C5A1D1BBA6066D2C8B98947DCC"/>
                 <NavigationProperty Name="to_CandidateEducation" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_C43505AD96F59FB0B2EB491B759BC486" FromRole="FromRole_assoc_C43505AD96F59FB0B2EB491B759BC486" ToRole="ToRole_assoc_C43505AD96F59FB0B2EB491B759BC486"/>
+                <NavigationProperty Name="to_ComputerLevelVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_746E3394D8895A840EA7273825303B52" FromRole="FromRole_assoc_746E3394D8895A840EA7273825303B52" ToRole="ToRole_assoc_746E3394D8895A840EA7273825303B52"/>
             </EntityType>
             <EntityType Name="ZHR_C_CANDIDATE_EDUCATIONType" sap:label="Образование Consumption" sap:content-version="1">
                 <Key>
@@ -139,6 +147,13 @@
                 <NavigationProperty Name="SiblingEntity" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_CC5FE811E9D4E548059A2AF9856A9285" FromRole="FromRole_assoc_CC5FE811E9D4E548059A2AF9856A9285" ToRole="ToRole_assoc_CC5FE811E9D4E548059A2AF9856A9285"/>
                 <NavigationProperty Name="to_CandidateHeader" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_003B7A665A5852982F6B67F50B85C6B0" FromRole="FromRole_assoc_003B7A665A5852982F6B67F50B85C6B0" ToRole="ToRole_assoc_003B7A665A5852982F6B67F50B85C6B0"/>
             </EntityType>
+            <EntityType Name="ZHR_I_COMPUTER_LEVEL_VHType" sap:label="Computer Level Value Help" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="1" sap:display-format="NonNegative" sap:text="Description" sap:label="Номер" sap:quickinfo="Num1"/>
+                <Property Name="Description" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Уровень владения ПК" sap:quickinfo="30 знаков"/>
+            </EntityType>
             <ComplexType Name="ValidationFunctionResult">
                 <Property Name="IsValid" Type="Edm.Boolean" sap:label="Явл. действ."/>
             </ComplexType>
@@ -149,6 +164,18 @@
             <Association Name="assoc_C43505AD96F59FB0B2EB491B759BC486" sap:content-version="1">
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="1" Role="FromRole_assoc_C43505AD96F59FB0B2EB491B759BC486"/>
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_EDUCATIONType" Multiplicity="*" Role="ToRole_assoc_C43505AD96F59FB0B2EB491B759BC486"/>
+            </Association>
+            <Association Name="assoc_746E3394D8895A840EA7273825303B52" sap:content-version="1">
+                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="1" Role="FromRole_assoc_746E3394D8895A840EA7273825303B52"/>
+                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COMPUTER_LEVEL_VHType" Multiplicity="0..1" Role="ToRole_assoc_746E3394D8895A840EA7273825303B52"/>
+                <ReferentialConstraint>
+                    <Principal Role="ToRole_assoc_746E3394D8895A840EA7273825303B52">
+                        <PropertyRef Name="Id"/>
+                    </Principal>
+                    <Dependent Role="FromRole_assoc_746E3394D8895A840EA7273825303B52">
+                        <PropertyRef Name="comp_level"/>
+                    </Dependent>
+                </ReferentialConstraint>
             </Association>
             <Association Name="assoc_F1D7B6237AE309C77B5F920FCC0983CF" sap:content-version="1">
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="1" Role="FromRole_assoc_F1D7B6237AE309C77B5F920FCC0983CF"/>
@@ -170,9 +197,14 @@
                 <EntitySet Name="I_DraftAdministrativeData" EntityType="ZHR_C_CANDIDATEHEADER_CDS.I_DraftAdministrativeDataType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
                 <EntitySet Name="ZHR_C_CANDIDATEHEADER" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" sap:content-version="1"/>
                 <EntitySet Name="ZHR_C_CANDIDATE_EDUCATION" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_EDUCATIONType" sap:content-version="1"/>
+                <EntitySet Name="ZHR_I_COMPUTER_LEVEL_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COMPUTER_LEVEL_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <AssociationSet Name="assoc_1AAC87C5A1D1BBA6066D2C8B98947DCC" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_1AAC87C5A1D1BBA6066D2C8B98947DCC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="FromRole_assoc_1AAC87C5A1D1BBA6066D2C8B98947DCC"/>
                     <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="ToRole_assoc_1AAC87C5A1D1BBA6066D2C8B98947DCC"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_746E3394D8895A840EA7273825303B52" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_746E3394D8895A840EA7273825303B52" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="FromRole_assoc_746E3394D8895A840EA7273825303B52"/>
+                    <End EntitySet="ZHR_I_COMPUTER_LEVEL_VH" Role="ToRole_assoc_746E3394D8895A840EA7273825303B52"/>
                 </AssociationSet>
                 <AssociationSet Name="assoc_CC5FE811E9D4E548059A2AF9856A9285" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_CC5FE811E9D4E548059A2AF9856A9285" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="ZHR_C_CANDIDATE_EDUCATION" Role="FromRole_assoc_CC5FE811E9D4E548059A2AF9856A9285"/>
@@ -245,6 +277,26 @@
                     <Collection>
                         <String>ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADER_CDS_Entities/ZHR_C_CANDIDATEHEADER</String>
                     </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType/comp_level" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+                <Annotation Term="Common.ValueList">
+                    <Record>
+                        <PropertyValue Property="Label" String="Computer Level Value Help"/>
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_COMPUTER_LEVEL_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="false"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="comp_level"/>
+                                    <PropertyValue Property="ValueListProperty" String="Id"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Description"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
                 </Annotation>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
