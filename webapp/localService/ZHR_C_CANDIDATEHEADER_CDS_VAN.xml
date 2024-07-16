@@ -204,9 +204,6 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="education_type"/>
-                                </Record>
-                                <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="educ_type_numc"/>
                                 </Record>
                             </Collection>

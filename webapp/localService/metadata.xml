@@ -315,6 +315,12 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="educ_type_numc"/>
                                     <PropertyValue Property="ValueListProperty" String="ID"/>
                                 </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="langu"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Description"/>
+                                </Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
