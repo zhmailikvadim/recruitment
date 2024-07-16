@@ -28,20 +28,23 @@
                                             <Collection>
                                                 <Record Type="UI.ReferenceFacet">
                                                     <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#EDC"/>
-                                                    <PropertyValue Property="Label" String="Вид Образования"/>
                                                     <PropertyValue Property="ID" String="EDC"/>
                                                 </Record>
                                             </Collection>
                                         </PropertyValue>
-                                        <PropertyValue Property="Label" String=""/>
+                                        <PropertyValue Property="Label" String="Вид"/>
                                     </Record>
                                     <Record Type="UI.ReferenceFacet">
                                         <PropertyValue Property="Target" AnnotationPath="to_CandidateEducation/@UI.LineItem"/>
-                                        <PropertyValue Property="Label" String="Образование"/>
                                         <PropertyValue Property="ID" String="EDUC"/>
                                     </Record>
                                 </Collection>
                             </PropertyValue>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Специальные курсы, школы, стажировки, семинары"/>
+                            <PropertyValue Property="ID" String="SEM1"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateSeminar/@UI.LineItem"/>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#COMPLEVEL"/>
@@ -61,12 +64,10 @@
                     </Collection>
                 </Annotation>
             </Annotations>
-
-
-              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/comp_level">
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/comp_level">
                 <Annotation Term="Common.Text" Path="to_ComputerLevelVH/Description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
-             </Annotation>
+</Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
@@ -85,7 +86,6 @@
                     </Record>
                 </Annotation>
             </Annotations>
-          
             <Annotations Target="SAP.ZHR_C_CANDIDATE_EDUCATIONType">
                 <Annotation Term="UI.Facets">
                     <Collection>
@@ -100,7 +100,7 @@
             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/educ_type_numc">
                 <Annotation Term="Common.Text" Path="to_EducTypeVH/Description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
-             </Annotation>
+</Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">

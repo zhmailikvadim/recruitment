@@ -150,6 +150,13 @@
                 },
                 "entitySet": "ZHR_C_CANDIDATE_EDUCATION",
                 "navigationProperty": "to_CandidateEducation"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_SEMINAR": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_SEMINAR",
+                "navigationProperty": "to_CandidateSeminar"
               }
             }
           }
