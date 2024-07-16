@@ -18,21 +18,36 @@
                             <PropertyValue Property="Label" String="Личные данные"/>
                             <PropertyValue Property="ID" String="FIO"/>
                         </Record>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#CONTACTS"/>
-                            <PropertyValue Property="Label" String="Контакты"/>
-                            <PropertyValue Property="ID" String="CONTACTS"/>
-                        </Record>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="to_CandidateEducation/@UI.LineItem"/>
+                        <Record Type="UI.CollectionFacet">
+                            <PropertyValue Property="ID" String="EDC"/>
                             <PropertyValue Property="Label" String="Образование"/>
-                            <PropertyValue Property="ID" String="EDUC"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="UI.CollectionFacet">
+                                        <PropertyValue Property="Facets">
+                                            <Collection>
+                                                <Record Type="UI.ReferenceFacet">
+                                                    <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#EDC"/>
+                                                    <PropertyValue Property="Label" String="Вид Образования"/>
+                                                    <PropertyValue Property="ID" String="EDC"/>
+                                                </Record>
+                                            </Collection>
+                                        </PropertyValue>
+                                        <PropertyValue Property="Label" String=""/>
+                                    </Record>
+                                    <Record Type="UI.ReferenceFacet">
+                                        <PropertyValue Property="Target" AnnotationPath="to_CandidateEducation/@UI.LineItem"/>
+                                        <PropertyValue Property="Label" String="Образование"/>
+                                        <PropertyValue Property="ID" String="EDUC"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#COMPLEVEL"/>
                             <PropertyValue Property="Label" String="Владение компьютером "/>
                             <PropertyValue Property="ID" String="COMPLEVEL"/>
-                        </Record>                        
+                        </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ADDRESS"/>
                             <PropertyValue Property="Label" String="Адрес постоянной регистрации"/>
@@ -46,17 +61,55 @@
                     </Collection>
                 </Annotation>
             </Annotations>
-            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/comp_level">
+
+
+              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/comp_level">
+                <Annotation Term="Common.Text" Path="to_ComputerLevelVH/Description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+             </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
-                        <PropertyValue Property="Label" String="Уровень владения компьютером"/>
                         <PropertyValue Property="CollectionPath" String="ZHR_I_COMPUTER_LEVEL_VH"/>
-                        <PropertyValue Property="SearchSupported" Bool="true"/>
                         <PropertyValue Property="Parameters">
                             <Collection>
                                 <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="comp_level"/>
                                     <PropertyValue Property="ValueListProperty" String="Id"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Description"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+          
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_EDUCATIONType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Образование"/>
+                            <PropertyValue Property="ID" String="EDT"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TABEDC"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/educ_type_numc">
+                <Annotation Term="Common.Text" Path="to_EducTypeVH/Description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+             </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_EDUC_TYPE_VH"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="educ_type_numc"/>
+                                    <PropertyValue Property="ValueListProperty" String="ID"/>
                                 </Record>
                                 <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="Description"/>
