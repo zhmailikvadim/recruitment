@@ -15,7 +15,7 @@
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#FIO"/>
-                            <PropertyValue Property="Label" String="Личные данные"/>
+                            <PropertyValue Property="Label" String="Личные данные "/>
                             <PropertyValue Property="ID" String="FIO"/>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
