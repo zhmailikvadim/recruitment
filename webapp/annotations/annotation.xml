@@ -18,6 +18,11 @@
                             <PropertyValue Property="Label" String="Личные данные"/>
                             <PropertyValue Property="ID" String="FIO"/>
                         </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#CONTACTS"/>
+                            <PropertyValue Property="Label" String="Контакты"/>
+                            <PropertyValue Property="ID" String="CN"/>
+                        </Record>
                         <Record Type="UI.CollectionFacet">
                             <PropertyValue Property="ID" String="EDC"/>
                             <PropertyValue Property="Label" String="Образование"/>
@@ -52,6 +57,64 @@
                             <PropertyValue Property="ID" String="COMPLEVEL"/>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#DRIV"/>
+                            <PropertyValue Property="Label" String="Автомобиль"/>
+                            <PropertyValue Property="ID" String="DRIV"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Владение инностранными языками"/>
+                            <PropertyValue Property="ID" String="LGAGE"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateLanguage/@UI.LineItem"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Предшествующее место работы"/>
+                            <PropertyValue Property="ID" String="LGWRK"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateLastWork/@UI.LineItem"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Профессиональные рекомендации"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateProfRecom/@UI.LineItem"/>
+                            <PropertyValue Property="ID" String="PRDT"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ARM"/>
+                            <PropertyValue Property="Label" String="Служба в Вооруженных Силах "/>
+                            <PropertyValue Property="ID" String="ARM1"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SAL"/>
+                            <PropertyValue Property="Label" String=""/>
+                            <PropertyValue Property="ID" String="SL"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SIK"/>
+                            <PropertyValue Property="Label" String=""/>
+                            <PropertyValue Property="ID" String="SL1"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#REL"/>
+                            <PropertyValue Property="Label" String="Родственники"/>
+                            <PropertyValue Property="ID" String="RRL"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateRelat/@UI.LineItem"/>
+                            <PropertyValue Property="ID" String="RELAT"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#RESP"/>
+                            <PropertyValue Property="Label" String="Администр./Уголовная Ответств."/>
+                            <PropertyValue Property="ID" String="RESPON"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#FAM"/>
+                            <PropertyValue Property="Label" String="Семейное положение"/>
+                            <PropertyValue Property="ID" String="FAMI"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateFamily/@UI.LineItem"/>
+                            <PropertyValue Property="ID" String="FAMILY"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ADDRESS"/>
                             <PropertyValue Property="Label" String="Адрес постоянной регистрации"/>
                             <PropertyValue Property="ID" String="ADDRESS"/>
@@ -60,6 +123,16 @@
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ADDRESSF"/>
                             <PropertyValue Property="Label" String="Адрес фактического проживания"/>
                             <PropertyValue Property="ID" String="ADDRESSF"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#HOB"/>
+                            <PropertyValue Property="Label" String="Интересы"/>
+                            <PropertyValue Property="ID" String="HOB"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TCH"/>
+                            <PropertyValue Property="Label" String="Данные о пользователе"/>
+                            <PropertyValue Property="ID" String="TCH1"/>
                         </Record>
                     </Collection>
                 </Annotation>
@@ -97,10 +170,76 @@
                     </Collection>
                 </Annotation>
             </Annotations>
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_SEMINARType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Специальные курсы, школы, стажировки, семинары"/>
+                            <PropertyValue Property="ID" String="SM"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SEM"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_LANGUAGEType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Владение иностранными языками"/>
+                            <PropertyValue Property="ID" String="LGN1"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#LGN"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_LAST_WORKType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Предшествующее место работы"/>
+                            <PropertyValue Property="ID" String="WR"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#LWRK"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_PROFRECOMType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Профессиональные рекомендации"/>
+                            <PropertyValue Property="ID" String="PRF"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#PROF"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_RELATIVESType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Родственники"/>
+                            <PropertyValue Property="ID" String="RL"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#REL"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_FAMILYType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Семья"/>
+                            <PropertyValue Property="ID" String="FAMILY"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#FAML"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/educ_type_numc">
                 <Annotation Term="Common.Text" Path="to_EducTypeVH/Description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
-</Annotation>
+                </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
@@ -113,6 +252,53 @@
                                 </Record>
                                 <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="Description"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_LANGUAGEType/ProfLevel">
+                <Annotation Term="Common.Text" Path="to_EducLanguVH/Description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+              </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="Label" String="Уровень"/>
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_LEVEL_LANG_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ProfLevel"/>
+                                    <PropertyValue Property="ValueListProperty" String="ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Description"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/family_stat_id">
+                <Annotation Term="Common.Text" Path="to_FamilyStatVH/description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+              </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_FAMILY_STAT_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="family_stat_id"/>
+                                    <PropertyValue Property="ValueListProperty" String="id"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="description"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>

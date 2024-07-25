@@ -157,6 +157,41 @@
                 },
                 "entitySet": "ZHR_C_CANDIDATE_SEMINAR",
                 "navigationProperty": "to_CandidateSeminar"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_LANGUAGE": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_LANGUAGE",
+                "navigationProperty": "to_CandidateLanguage"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_PROFRECOM": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_PROFRECOM",
+                "navigationProperty": "to_CandidateProfRecom"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_LAST_WORK": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_LAST_WORK",
+                "navigationProperty": "to_CandidateLastWork"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_RELATIVES": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_RELATIVES",
+                "navigationProperty": "to_CandidateRelat"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_FAMILY": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_FAMILY",
+                "navigationProperty": "to_CandidateFamily"
               }
             }
           }
