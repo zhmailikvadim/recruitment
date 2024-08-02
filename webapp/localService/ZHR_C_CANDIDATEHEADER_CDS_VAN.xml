@@ -140,6 +140,12 @@
                         <PropertyValue Property="Title" String="Фамилия"/>
                     </Record>
                 </Annotation>
+                <Annotation Term="UI.DataPoint" Qualifier="pernr">
+                    <Record>
+                        <PropertyValue Property="Value" Path="pernr"/>
+                        <PropertyValue Property="Title" String="Табельный номер"/>
+                    </Record>
+                </Annotation>
                 <Annotation Term="UI.DataPoint" Qualifier="vorna">
                     <Record>
                         <PropertyValue Property="Value" Path="vorna"/>
@@ -272,6 +278,9 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="pernr"/>
+                                </Record>
+                                <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="nachn"/>
                                 </Record>
                                 <Record Type="UI.DataField">
@@ -374,6 +383,9 @@
                                     <PropertyValue Property="Value" Path="plvar"/>
                                 </Record>
                                 <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="zsap_user"/>
+                                </Record>
+                                <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="zhr_user"/>
                                 </Record>
                                 <Record Type="UI.DataField">
@@ -391,12 +403,25 @@
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="created_time"/>
                                 </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="changed_data"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="changed_user"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="changed_time"/>
+                                </Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
                 </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="pernr"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="nachn"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
@@ -535,6 +560,10 @@
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="zsap_user"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="zhr_user"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
                         </Record>
@@ -563,11 +592,23 @@
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="changed_data"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="admin_respons_text"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
                         </Record>
                         <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="changed_user"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="crimin_respons"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Value" Path="changed_time"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/Low"/>
                         </Record>
                         <Record Type="UI.DataField">
@@ -1166,6 +1207,42 @@
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_LEVEL_LANG_VHType">
                 <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.zhr_c_recruitment_logType/ActiveUUID">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.zhr_c_recruitment_logType/HasActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.zhr_c_recruitment_logType/HasDraftEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.zhr_c_recruitment_logType/IsActiveEntity">
+                <Annotation Term="UI.HiddenFilter"/>
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.zhr_c_recruitment_logType/DraftEntityCreationDateTime">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.zhr_c_recruitment_logType/DraftEntityLastChangeDateTime">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.zhr_c_recruitment_logType/Preparation_ac">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.zhr_c_recruitment_logType/Validation_ac">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
             </Annotations>
         </Schema>
     </edmx:DataServices>
