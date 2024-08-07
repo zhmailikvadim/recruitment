@@ -140,7 +140,7 @@
             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/comp_level">
                 <Annotation Term="Common.Text" Path="to_ComputerLevelVH/Description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
-</Annotation>
+                </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
@@ -261,7 +261,7 @@
             <Annotations Target="SAP.ZHR_C_CANDIDATE_LANGUAGEType/prof_level">
                 <Annotation Term="Common.Text" Path="to_EducLanguVH/Description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
-              </Annotation>
+                </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
@@ -284,8 +284,8 @@
             </Annotations>
             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/family_stat_id">
                 <Annotation Term="Common.Text" Path="to_FamilyStatVH/description">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
-              </Annotation>
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
