@@ -282,6 +282,35 @@
                     </Record>
                 </Annotation>
             </Annotations>
+
+
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_LANGUAGEType/lang_id">
+                <Annotation Term="Common.Text" Path="to_NameLanguVH/Description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+              </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="Label" String="Наименование"/>
+                        <PropertyValue Property="CollectionPath" String="ZHR_C_CANDIDATE_LANGUAGE"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="lang_id"/>
+                                    <PropertyValue Property="ValueListProperty" String="objid"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Description"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            
+
             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/family_stat_id">
                 <Annotation Term="Common.Text" Path="to_FamilyStatVH/description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
@@ -290,8 +319,8 @@
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
                         <PropertyValue Property="CollectionPath" String="ZHR_I_FAMILY_STAT_VH"/>
-                        <PropertyValue Property="SearchSupported" Bool="true"/>
-                        <PropertyValue Property="Parameters">
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters" >
                             <Collection>
                                 <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="family_stat_id"/>
@@ -299,6 +328,159 @@
                                 </Record>
                                 <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="description"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+
+             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/work_condition_id">
+                <Annotation Term="Common.Text" Path="to_CondWorkVH/Description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+              </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_COND_WORK_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters" >
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="work_condition_id"/>
+                                    <PropertyValue Property="ValueListProperty" String="EmploymentFract"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Description"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/business_trip_id">
+                <Annotation Term="Common.Text" Path="to_CondWorkVH/Description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+              </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_BUSIN_TRIP_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters" >
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="business_trip_id"/>
+                                    <PropertyValue Property="ValueListProperty" String="WorkContract"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Description"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/land1">
+                <Annotation Term="Common.Text" Path="to_CountryVH/Landx50">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+              </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_COUNTRY_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters" >
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="land1"/>
+                                    <PropertyValue Property="ValueListProperty" String="land1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Landx50"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/land1f">
+                <Annotation Term="Common.Text" Path="to_CountryVH/Landx50">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+              </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_COUNTRY_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters" >
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="land1f"/>
+                                    <PropertyValue Property="ValueListProperty" String="land1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Landx50"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/state">
+                <Annotation Term="Common.Text" Path="to_RegionVH/bezei">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+              </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_REGION_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters" >
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="state"/>
+                                    <PropertyValue Property="ValueListProperty" String="bland"/>
+                                </Record>
+                                 <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="land1"/>
+                                    <PropertyValue Property="ValueListProperty" String="land1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="bezei"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/statef">
+                <Annotation Term="Common.Text" Path="to_RegionVH/bezei">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+              </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_REGION_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters" >
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="statef"/>
+                                    <PropertyValue Property="ValueListProperty" String="bland"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="land1f"/>
+                                    <PropertyValue Property="ValueListProperty" String="land1"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="bezei"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
