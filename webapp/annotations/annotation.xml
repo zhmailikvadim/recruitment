@@ -59,11 +59,7 @@
                             <PropertyValue Property="Label" String="Владение компьютером "/>
                             <PropertyValue Property="ID" String="COMPLEVEL"/>
                         </Record>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#DRIV"/>
-                            <PropertyValue Property="Label" String="Автомобиль"/>
-                            <PropertyValue Property="ID" String="DRIV"/>
-                        </Record>
+                   
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Label" String="Владение инностранными языками"/>
                             <PropertyValue Property="ID" String="LGAGE"/>
@@ -83,6 +79,16 @@
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ARM"/>
                             <PropertyValue Property="Label" String="Служба в Вооруженных Силах "/>
                             <PropertyValue Property="ID" String="ARM1"/>
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#DRIV"/>
+                            <PropertyValue Property="Label" String="Автомобиль"/>
+                            <PropertyValue Property="ID" String="AUTO1"/>
+                        </Record>
+                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Категория водительских прав"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateDriver/@UI.LineItem"/>
+                            <PropertyValue Property="ID" String="CATG"/>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SAL"/>
@@ -117,6 +123,8 @@
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateFamily/@UI.LineItem"/>
                             <PropertyValue Property="ID" String="FAMILY"/>
                         </Record>
+                       
+                       
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ADDRESS"/>
                             <PropertyValue Property="Label" String="Адрес постоянной регистрации"/>
@@ -137,6 +145,7 @@
                             <PropertyValue Property="Label" String="Данные о пользователе"/>
                             <PropertyValue Property="ID" String="TCH1"/>
                         </Record>
+                       
                     </Collection>
                 </Annotation>
             </Annotations>
@@ -162,6 +171,23 @@
                     </Record>
                 </Annotation>
             </Annotations>
+
+
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_DRIVERType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Категория водительских прав"/>
+                            <PropertyValue Property="ID" String="PRV"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#CATG"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
+
+        
+
             <Annotations Target="SAP.ZHR_C_CANDIDATE_EDUCATIONType">
                 <Annotation Term="UI.Facets">
                     <Collection>
@@ -217,6 +243,8 @@
                     </Collection>
                 </Annotation>
             </Annotations>
+      
+            
             <Annotations Target="SAP.ZHR_C_CANDIDATE_RELATIVESType">
                 <Annotation Term="UI.Facets">
                     <Collection>
@@ -239,6 +267,8 @@
                     </Collection>
                 </Annotation>
             </Annotations>
+
+
             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/educ_type_numc">
                 <Annotation Term="Common.Text" Path="to_EducTypeVH/Description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
@@ -493,31 +523,28 @@
                 </Annotation>
             </Annotations>
 
-                  <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/id_car_category">
-                <Annotation Term="Common.Text" Path="to_CategoryVH/name">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
-              </Annotation>
-                <Annotation Term="Common.ValueListWithFixedValues" Bool="false"/>
-                
-                <Annotation Term="Common.ValueList" >
-                    <Record Type="Common.ValueListType">
-                        <PropertyValue Property="CollectionPath" String="ZHR_I_CATEGORY_VH"/>
-                        <PropertyValue Property="SearchSupported" Bool="true"/>
-                        <PropertyValue Property="Parameters">
+             
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_DRIVERType/id_category">
+                <Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
+                    <Record Type="com.sap.vocabularies.Common.v1.ValueListType">
+                        <PropertyValue Property="CollectionPath"  String="ZHR_I_CATEGORY_VH"/>
+                        <PropertyValue Property="Parameters" >
                             <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="id_car_category"/>
+                                <Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="id_category"/>
                                     <PropertyValue Property="ValueListProperty" String="id"/>
                                 </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                <Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="name"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
-                        <PropertyValue Property="Label" String="Категория"/>
                     </Record>
                 </Annotation>
             </Annotations>
+                
+
+       
 
           
 
