@@ -524,21 +524,28 @@
             </Annotations>
 
              
-            <Annotations Target="SAP.ZHR_C_CANDIDATE_DRIVERType/id_category">
-                <Annotation Term="com.sap.vocabularies.Common.v1.ValueList">
-                    <Record Type="com.sap.vocabularies.Common.v1.ValueListType">
-                        <PropertyValue Property="CollectionPath"  String="ZHR_I_CATEGORY_VH"/>
-                        <PropertyValue Property="Parameters" >
+  <Annotations Target="SAP.ZHR_C_CANDIDATE_DRIVERType/id_category">
+                <Annotation Term="Common.Text" Path="to_CategoryVH/name">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+              </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                
+                <Annotation Term="Common.ValueList" >
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_CATEGORY_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
                             <Collection>
-                                <Record Type="com.sap.vocabularies.Common.v1.ValueListParameterOut">
+                                <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="id_category"/>
                                     <PropertyValue Property="ValueListProperty" String="id"/>
                                 </Record>
-                                <Record Type="com.sap.vocabularies.Common.v1.ValueListParameterDisplayOnly">
+                                <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="name"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
+                        <PropertyValue Property="Label" String="Категория"/>
                     </Record>
                 </Annotation>
             </Annotations>
