@@ -373,7 +373,7 @@
 
              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/work_condition_id">
                 <Annotation Term="Common.Text" Path="to_CondWorkVH/Description">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
               </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 <Annotation Term="Common.ValueList">
@@ -397,7 +397,7 @@
 
              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/business_trip_id">
                 <Annotation Term="Common.Text" Path="to_CondWorkVH/Description">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
               </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 <Annotation Term="Common.ValueList">
@@ -421,9 +421,9 @@
 
               <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/land1">
                 <Annotation Term="Common.Text" Path="to_CountryVH/Landx50">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
               </Annotation>
-                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="false"/>
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
                         <PropertyValue Property="CollectionPath" String="ZHR_I_COUNTRY_VH"/>
@@ -444,10 +444,10 @@
             </Annotations>
 
              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/land1f">
-                <Annotation Term="Common.Text" Path="to_CountryVH/Landx50">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+                <Annotation Term="Common.Text" Path="to_CountryFVH/Landx50">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
               </Annotation>
-                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="false"/>
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
                         <PropertyValue Property="CollectionPath" String="ZHR_I_COUNTRY_VH"/>
@@ -469,9 +469,9 @@
 
               <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/state">
                 <Annotation Term="Common.Text" Path="to_RegionVH/bezei">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
               </Annotation>
-                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="false"/>
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
                         <PropertyValue Property="CollectionPath" String="ZHR_I_REGION_VH"/>
@@ -496,10 +496,10 @@
             </Annotations>
 
             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/statef">
-                <Annotation Term="Common.Text" Path="to_RegionVH/bezei">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+                <Annotation Term="Common.Text" Path="to_RegionFVH/bezei">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
               </Annotation>
-                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="false"/>
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
                         <PropertyValue Property="CollectionPath" String="ZHR_I_REGION_VH"/>
@@ -526,7 +526,7 @@
              
   <Annotations Target="SAP.ZHR_C_CANDIDATE_DRIVERType/id_category">
                 <Annotation Term="Common.Text" Path="to_CategoryVH/name">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextArrangement"/>
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
               </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 
