@@ -223,6 +223,13 @@
                                 },
                                 "entitySet": "ZHR_C_CANDIDATE_DRIVER",
                                 "navigationProperty": "to_CandidateDriver"
+                            },
+                            "ObjectPage|ZHR_C_DESIRED_PROFESSION": {
+                                "component": {
+                                    "name": "sap.suite.ui.generic.template.ObjectPage"
+                                },
+                                "entitySet": "ZHR_C_DESIRED_PROFESSION",
+                                "navigationProperty": "to_CandidateDesired"
                             }
                         }
                     }

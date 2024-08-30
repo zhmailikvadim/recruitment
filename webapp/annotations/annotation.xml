@@ -90,6 +90,11 @@
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateDriver/@UI.LineItem"/>
                             <PropertyValue Property="ID" String="CATG"/>
                         </Record>
+                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Желаемая профессия"/>
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateDesired/@UI.LineItem"/>
+                            <PropertyValue Property="ID" String="DES"/>
+                        </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SAL"/>
                             <PropertyValue Property="Label" String=""/>
@@ -219,6 +224,17 @@
                             <PropertyValue Property="Label" String="Владение иностранными языками"/>
                             <PropertyValue Property="ID" String="LGN1"/>
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#LGN"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+              <Annotations Target="SAP.ZHR_C_DESIRED_PROFESSIONType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Профессия"/>
+                            <PropertyValue Property="ID" String="DES1"/>
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#PROFDES"/>
                         </Record>
                     </Collection>
                 </Annotation>
