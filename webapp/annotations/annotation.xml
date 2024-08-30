@@ -107,6 +107,7 @@
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateRelat/@UI.LineItem"/>
+                            <PropertyValue Property="Label" String="Сведения о родственниках"/>
                             <PropertyValue Property="ID" String="RELAT"/>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
@@ -121,6 +122,7 @@
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateFamily/@UI.LineItem"/>
+                            <PropertyValue Property="Label" String="Сведения о семье"/>
                             <PropertyValue Property="ID" String="FAMILY"/>
                         </Record>
                        
@@ -373,7 +375,7 @@
 
              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/work_condition_id">
                 <Annotation Term="Common.Text" Path="to_CondWorkVH/Description">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
               </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 <Annotation Term="Common.ValueList">
@@ -397,7 +399,7 @@
 
              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/business_trip_id">
                 <Annotation Term="Common.Text" Path="to_CondWorkVH/Description">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
               </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
                 <Annotation Term="Common.ValueList">
@@ -546,6 +548,32 @@
                             </Collection>
                         </PropertyValue>
                         <PropertyValue Property="Label" String="Категория"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+              <Annotations Target="SAP.ZHR_C_CANDIDATE_RELATIVESType/relat_id">
+                <Annotation Term="Common.Text" Path="to_TypeRelatVH/Description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+              </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                
+                <Annotation Term="Common.ValueList" >
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_TYPE_RELAT_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="relat_id"/>
+                                    <PropertyValue Property="ValueListProperty" String="ID"/>
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="description"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Степень родства"/>
                     </Record>
                 </Annotation>
             </Annotations>
