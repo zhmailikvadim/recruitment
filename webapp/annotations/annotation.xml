@@ -542,8 +542,8 @@
 
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
-                        <PropertyValue Property="CollectionPath" String="ZHR_I_CATEGORY_VH" />
-                     
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_CATEGORY_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
                         <PropertyValue Property="Parameters">
                             <Collection>
                                 <Record Type="Common.ValueListParameterInOut">
@@ -562,56 +562,38 @@
 
             <Annotations Target="SAP.ZHR_C_CANDIDATE_RELATIVESType/relat_id">
                 <Annotation Term="Common.Text" Path="to_TypeRelatVH/Description">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
-                </Annotation>
-                <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
-
-                <Annotation Term="Common.ValueList">
-                    <Record Type="Common.ValueListType">
-                        <PropertyValue Property="CollectionPath" String="ZHR_I_TYPE_RELAT_VH" />
-                       
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="relat_id" />
-                                    <PropertyValue Property="ValueListProperty" String="ID" />
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="description" />
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                        <PropertyValue Property="Label" String="Степень родства" />
-                    </Record>
-                </Annotation>
-            </Annotations>
-
-             <Annotations Target="SAP.ZHR_C_DESIRED_PROFESSIONType/id_profess">
-                <Annotation Term="Common.Text" Path="to_DesiredProfVH/stext">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
               </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+                
                 <Annotation Term="Common.ValueList" >
                     <Record Type="Common.ValueListType">
-                        <PropertyValue Property="CollectionPath" String="ZHR_I_DESIRED_PROFES_VH"/>
-                       
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_TYPE_RELAT_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
                         <PropertyValue Property="Parameters">
                             <Collection>
                                 <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="id_profess"/>
-                                    <PropertyValue Property="ValueListProperty" String="short"/>
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="relat_id"/>
+                                    <PropertyValue Property="ValueListProperty" String="ID"/>
                                 </Record>
                                 <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="stext"/>
+                                    <PropertyValue Property="ValueListProperty" String="description"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
-                        <PropertyValue Property="Label" String="Профессия"/>
+                        <PropertyValue Property="Label" String="Степень родства"/>
                     </Record>
                 </Annotation>
             </Annotations>
+                
+
+       
+
+          
 
 
+
+           
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
