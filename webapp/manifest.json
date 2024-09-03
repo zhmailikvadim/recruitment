@@ -100,6 +100,14 @@
             "@i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "uri": "i18n/i18n.properties"
+            },
+            
+            "i18n|sap.suite.ui.generic.template.ObjectPage|ZHR_C_CANDIDATEHEADER": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                "bundleName": "recruitment.i18n.ListReport.i18n"   
+                      }
+                      
             }
         },
         "resources": {
@@ -109,30 +117,6 @@
             "config": {},
             "routes": [],
             "targets": {}
-        },
-        "extends": {
-            "extensions": {
-                "sap.ui.controllerExtensions": {
-                    "sap.suite.ui.generic.template.ObjectPage.view.Details": {
-                        "controllerName": "recruitment.ext.controller.ObjectPageExt",
-                        "sap.ui.generic.app": {
-                            "ZHR_C_CANDIDATEHEADER": {
-                                "EntitySet": "ZHR_C_CANDIDATEHEADER",
-                                "Header": {
-                                    "Actions": {
-                                        "idOnPressExcelExport": {
-                                            "id": "idOnPressExcelExportButton",
-                                            "text": "Експорт в Excell",
-                                            "press": "onPressExcelExport",
-                                            "requiresSelection": true
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
         }
     },
     "sap.ui.generic.app": {

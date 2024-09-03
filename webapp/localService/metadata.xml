@@ -355,13 +355,14 @@
                 <Property Name="Preparation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Validation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="uuid" Type="Edm.Guid" Nullable="false" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
+                <Property Name="relat_work" Type="Edm.String" MaxLength="180" sap:label="Подразделение, должность" sap:quickinfo="Место работы, должность"/>
                 <Property Name="uuid_candidate" Type="Edm.Guid" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
                 <Property Name="relat_name" Type="Edm.String" MaxLength="120" sap:label="Имя" sap:quickinfo="ФИО"/>
                 <Property Name="relat_otch" Type="Edm.String" MaxLength="120" sap:label="Отчество" sap:quickinfo="ФИО"/>
                 <Property Name="relat_id" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Степень родства" sap:quickinfo="Более точно не опр. область, возм. исп. для уровня &quot;заплат&quot;"/>
+                <Property Name="RelatDegreeDescription" Type="Edm.String" MaxLength="40" sap:label="Степень родства" sap:quickinfo="Обозначение подтипа" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="relat_degree" Type="Edm.String" MaxLength="80" sap:label="Степень родства"/>
                 <Property Name="relat_fio" Type="Edm.String" MaxLength="120" sap:label="Фамилия" sap:quickinfo="ФИО"/>
-                <Property Name="relat_work" Type="Edm.String" MaxLength="180" sap:label="Подразделение, должность" sap:quickinfo="Место работы, должность"/>
                 <Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key"/>
                 <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата создания черновика"/>
                 <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата последнего изменения черновика"/>
@@ -788,7 +789,7 @@
                 <EntitySet Name="ZHR_I_COMPUTER_LEVEL_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COMPUTER_LEVEL_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZHR_I_COND_WORK_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COND_WORK_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZHR_I_COUNTRY_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COUNTRY_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
-                <EntitySet Name="ZHR_I_DESIRED_PROFES_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_DESIRED_PROFES_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHR_I_DESIRED_PROFES_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_DESIRED_PROFES_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
                 <EntitySet Name="ZHR_I_EDUC_TYPE_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_EDUC_TYPE_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZHR_I_FAMILY_STAT_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_FAMILY_STAT_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZHR_I_LEVEL_LANG_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_LEVEL_LANG_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
@@ -1140,9 +1141,6 @@
                     <Parameter Name="SideEffectsQualifier" Type="Edm.String" Mode="In" Nullable="true"/>
                 </FunctionImport>
             </EntityContainer>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType/education_type" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
-            </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType/educ_type_numc" xmlns="http://docs.oasis-open.org/odata/ns/edm">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Mandatory"/>
             </Annotations>
