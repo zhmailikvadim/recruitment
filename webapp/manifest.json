@@ -105,7 +105,7 @@
             "i18n|sap.suite.ui.generic.template.ObjectPage|ZHR_C_CANDIDATEHEADER": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                "bundleName": "recruitment.i18n.ListReport.i18n"   
+                "bundleName": "recruitment.i18n.ObjectPage.i18n"   
                       }
                       
             }
