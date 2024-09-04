@@ -280,7 +280,7 @@
                 <NavigationProperty Name="DraftAdministrativeData" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_2C23E7200444D1384F42AD56BB4F324D" FromRole="FromRole_assoc_2C23E7200444D1384F42AD56BB4F324D" ToRole="ToRole_assoc_2C23E7200444D1384F42AD56BB4F324D"/>
                 <NavigationProperty Name="SiblingEntity" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_38EE3841B844ACC60CAFCAF630AC111E" FromRole="FromRole_assoc_38EE3841B844ACC60CAFCAF630AC111E" ToRole="ToRole_assoc_38EE3841B844ACC60CAFCAF630AC111E"/>
                 <NavigationProperty Name="to_CandidateHeader" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_5A7FB12F9D1CDE226B324F8FC8625D93" FromRole="FromRole_assoc_5A7FB12F9D1CDE226B324F8FC8625D93" ToRole="ToRole_assoc_5A7FB12F9D1CDE226B324F8FC8625D93"/>
-                <NavigationProperty Name="to_TypeRelatVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_3FEBE96EFB6C424021F775CA31D9B83C" FromRole="FromRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C" ToRole="ToRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C"/>
+                <NavigationProperty Name="to_TypeFamVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_9227EAA0B0641F7B78236076E4B119B1" FromRole="FromRole_assoc_9227EAA0B0641F7B78236076E4B119B1" ToRole="ToRole_assoc_9227EAA0B0641F7B78236076E4B119B1"/>
             </EntityType>
             <EntityType Name="ZHR_C_CANDIDATE_LANGUAGEType" sap:label="Инностранные языки" sap:content-version="1">
                 <Key>
@@ -750,9 +750,9 @@
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_FAMILYType" Multiplicity="1" Role="FromRole_assoc_5A7FB12F9D1CDE226B324F8FC8625D93"/>
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="0..1" Role="ToRole_assoc_5A7FB12F9D1CDE226B324F8FC8625D93"/>
             </Association>
-            <Association Name="assoc_3FEBE96EFB6C424021F775CA31D9B83C" sap:content-version="1">
-                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_FAMILYType" Multiplicity="1" Role="FromRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C"/>
-                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_TYPE_RELAT_VHType" Multiplicity="0..1" Role="ToRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C"/>
+            <Association Name="assoc_9227EAA0B0641F7B78236076E4B119B1" sap:content-version="1">
+                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_FAMILYType" Multiplicity="1" Role="FromRole_assoc_9227EAA0B0641F7B78236076E4B119B1"/>
+                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_TYPE_RELAT_VHType" Multiplicity="0..1" Role="ToRole_assoc_9227EAA0B0641F7B78236076E4B119B1"/>
             </Association>
             <Association Name="assoc_88715775598BC14C3D137647082B65B2" sap:content-version="1">
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_LANGUAGEType" Multiplicity="1" Role="FromRole_assoc_88715775598BC14C3D137647082B65B2"/>
@@ -839,9 +839,9 @@
                     <End EntitySet="ZHR_C_CANDIDATE_LAST_WORK" Role="FromRole_assoc_89B90CCEEB719905F6BA2BF00CC53114"/>
                     <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="ToRole_assoc_89B90CCEEB719905F6BA2BF00CC53114"/>
                 </AssociationSet>
-                <AssociationSet Name="assoc_3FEBE96EFB6C424021F775CA31D9B83C" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_3FEBE96EFB6C424021F775CA31D9B83C" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="ZHR_C_CANDIDATE_FAMILY" Role="FromRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C"/>
-                    <End EntitySet="ZHR_I_TYPE_RELAT_VH" Role="ToRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C"/>
+                <AssociationSet Name="assoc_9227EAA0B0641F7B78236076E4B119B1" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_9227EAA0B0641F7B78236076E4B119B1" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZHR_C_CANDIDATE_FAMILY" Role="FromRole_assoc_9227EAA0B0641F7B78236076E4B119B1"/>
+                    <End EntitySet="ZHR_I_TYPE_RELAT_VH" Role="ToRole_assoc_9227EAA0B0641F7B78236076E4B119B1"/>
                 </AssociationSet>
                 <AssociationSet Name="assoc_E2A4DB43244D6304D983783A4D655F32" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_E2A4DB43244D6304D983783A4D655F32" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="FromRole_assoc_E2A4DB43244D6304D983783A4D655F32"/>

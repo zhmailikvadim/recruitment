@@ -629,7 +629,7 @@
             </Annotations>
 
             <Annotations Target="SAP.ZHR_C_CANDIDATE_FAMILYType/relat_degree">
-                <Annotation Term="Common.Text" Path="to_TypeRelatVH/Description">
+                <Annotation Term="Common.Text" Path="to_TypeFamVH/Description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
                 </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
