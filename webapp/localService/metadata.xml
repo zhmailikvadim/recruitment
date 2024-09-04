@@ -49,9 +49,9 @@
                 <Property Name="work_condition_id" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="Условия труда" sap:quickinfo="Двузначный номер"/>
                 <Property Name="cand_relocate" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Готовность к командировкам, %" sap:quickinfo="30 знаков"/>
                 <Property Name="business_trip" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Счетчик" sap:quickinfo="Параметры подсчета"/>
-                <Property Name="business_trip_id" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Вид договора" sap:quickinfo="Параметры подсчета"/>
+                <Property Name="business_trip_id" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Вид занятости" sap:quickinfo="Параметры подсчета"/>
                 <Property Name="histo" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Запись в историю" sap:quickinfo="Индикатор записи в историю"/>
-                <Property Name="business_trip_check" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Готовность к переезду, %" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="business_trip_check" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Готовность к переезду" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
                 <Property Name="business_trip_sever" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Готовность к раб. в р-не Крайнего Севера" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
                 <Property Name="rsign" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Соединение" sap:quickinfo="Характеристика соединения"/>
                 <Property Name="relat" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Соединение/объект" sap:quickinfo="Соединение между объектами" sap:creatable="false" sap:updatable="false"/>
@@ -163,10 +163,10 @@
                 <Property Name="is_driver" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Наличие водительского удостоверения" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
                 <Property Name="is_arm_force" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Служба в Вооруженных Силах" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
                 <Property Name="arm_reason" Type="Edm.String" MaxLength="250" sap:label="Причина не прохождения службы"/>
-                <Property Name="min_salary" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Минимальный уровень заработной платы" sap:quickinfo="Зарплата"/>
-                <Property Name="sickness" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Укажите заболевания/инвалидность" sap:quickinfo="хронические заболевания, инвалидность, огранич. по сост. здоровья"/>
+                <Property Name="min_salary" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Минимальный уровень заработн. платы, USD" sap:quickinfo="Зарплата"/>
+                <Property Name="sickness" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Инвалидность" sap:quickinfo="хронические заболевания, инвалидность, огранич. по сост. здоровья"/>
                 <Property Name="aedtm" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата изменения" sap:quickinfo="Дата последнего изменения"/>
-                <Property Name="detail_sickness" Type="Edm.String" MaxLength="240" sap:label="Уточните" sap:quickinfo="Информация"/>
+                <Property Name="detail_sickness" Type="Edm.String" MaxLength="240" sap:label="Уточните медицинские противопоказания" sap:quickinfo="Информация"/>
                 <Property Name="relatives_bn" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Родственники в ПО «Белоруснефть»" sap:quickinfo="Родственники, работающие в ПО «Белоруснефть»"/>
                 <Property Name="admin_respons" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Была у Вас администрат. ответственность?" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
                 <Property Name="crimin_respons" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Была у Вас уголовная ответственность?" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
@@ -214,8 +214,8 @@
                 <Property Name="name_category_fc" Type="Edm.Byte" sap:label="Dyn. Field Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="uuid" Type="Edm.Guid" Nullable="false" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
                 <Property Name="uuid_candidate" Type="Edm.Guid" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
-                <Property Name="id_category" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:text="to_CategoryVH/name" sap:label="Категория" sap:quickinfo="Код" sap:value-list="standard"/>
-                <Property Name="name_category" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:field-control="name_category_fc" sap:label="Категория ВУ"/>
+                <Property Name="id_category" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Код Категория" sap:quickinfo="Код"/>
+                <Property Name="name_category" Type="Edm.String" MaxLength="20" sap:display-format="UpperCase" sap:field-control="name_category_fc" sap:label="Категория" sap:quickinfo="Категория ВУ"/>
                 <Property Name="car_exist" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="TRUE" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
                 <Property Name="dvriver" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="TRUE" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
                 <Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key"/>
@@ -261,11 +261,16 @@
                 <Property Name="Preparation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Validation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="uuid" Type="Edm.Guid" Nullable="false" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
+                <Property Name="relat_id" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Код степени родства" sap:quickinfo="Более точно не опр. область, возм. исп. для уровня &quot;заплат&quot;"/>
+                <Property Name="relat_degree" Type="Edm.String" MaxLength="80" sap:label="Степень родства"/>
                 <Property Name="uuid_candidate" Type="Edm.Guid" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
-                <Property Name="fio" Type="Edm.String" MaxLength="120" sap:label="Ф.И.О." sap:quickinfo="ФИО"/>
+                <Property Name="fio" Type="Edm.String" MaxLength="120" sap:label="ФИО"/>
                 <Property Name="grdate" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата рождения" sap:quickinfo="Поле типа DATS"/>
                 <Property Name="telnr" Type="Edm.String" MaxLength="30" sap:label="Телефон" sap:quickinfo="Номер телефона"/>
                 <Property Name="job" Type="Edm.String" MaxLength="20" sap:label="Место учебы, работы" sap:quickinfo="Учебное заведение"/>
+                <Property Name="nachn" Type="Edm.String" MaxLength="40" sap:label="Фамилия"/>
+                <Property Name="vorna" Type="Edm.String" MaxLength="40" sap:label="Имя"/>
+                <Property Name="nach2" Type="Edm.String" MaxLength="40" sap:label="Отчество"/>
                 <Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key"/>
                 <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата создания черновика"/>
                 <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата последнего изменения черновика"/>
@@ -275,6 +280,7 @@
                 <NavigationProperty Name="DraftAdministrativeData" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_2C23E7200444D1384F42AD56BB4F324D" FromRole="FromRole_assoc_2C23E7200444D1384F42AD56BB4F324D" ToRole="ToRole_assoc_2C23E7200444D1384F42AD56BB4F324D"/>
                 <NavigationProperty Name="SiblingEntity" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_38EE3841B844ACC60CAFCAF630AC111E" FromRole="FromRole_assoc_38EE3841B844ACC60CAFCAF630AC111E" ToRole="ToRole_assoc_38EE3841B844ACC60CAFCAF630AC111E"/>
                 <NavigationProperty Name="to_CandidateHeader" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_5A7FB12F9D1CDE226B324F8FC8625D93" FromRole="FromRole_assoc_5A7FB12F9D1CDE226B324F8FC8625D93" ToRole="ToRole_assoc_5A7FB12F9D1CDE226B324F8FC8625D93"/>
+                <NavigationProperty Name="to_TypeRelatVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_3FEBE96EFB6C424021F775CA31D9B83C" FromRole="FromRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C" ToRole="ToRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C"/>
             </EntityType>
             <EntityType Name="ZHR_C_CANDIDATE_LANGUAGEType" sap:label="Инностранные языки" sap:content-version="1">
                 <Key>
@@ -285,9 +291,10 @@
                 <Property Name="Validation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="uuid" Type="Edm.Guid" Nullable="false" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
                 <Property Name="uuid_candidate" Type="Edm.Guid" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
-                <Property Name="name_language" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Наименование Языка" sap:quickinfo="Наименование языка"/>
-                <Property Name="lang_id" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Наименование языка" sap:quickinfo="Идентификатор объекта"/>
-                <Property Name="prof_level" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative" sap:label="Уровень владения" sap:quickinfo="Num1"/>
+                <Property Name="name_language" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Наименование языка"/>
+                <Property Name="lang_id" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Код языка" sap:quickinfo="Идентификатор объекта"/>
+                <Property Name="level_name" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Уровень владения" sap:quickinfo="30 знаков"/>
+                <Property Name="prof_level" Type="Edm.String" MaxLength="1" sap:display-format="NonNegative" sap:label="Код уровеня владения" sap:quickinfo="Num1"/>
                 <Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key"/>
                 <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата создания черновика"/>
                 <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата последнего изменения черновика"/>
@@ -355,14 +362,13 @@
                 <Property Name="Preparation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Validation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="uuid" Type="Edm.Guid" Nullable="false" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
-                <Property Name="relat_work" Type="Edm.String" MaxLength="180" sap:label="Подразделение, должность" sap:quickinfo="Место работы, должность"/>
                 <Property Name="uuid_candidate" Type="Edm.Guid" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
                 <Property Name="relat_name" Type="Edm.String" MaxLength="120" sap:label="Имя" sap:quickinfo="ФИО"/>
                 <Property Name="relat_otch" Type="Edm.String" MaxLength="120" sap:label="Отчество" sap:quickinfo="ФИО"/>
-                <Property Name="relat_id" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Степень родства" sap:quickinfo="Более точно не опр. область, возм. исп. для уровня &quot;заплат&quot;"/>
-                <Property Name="RelatDegreeDescription" Type="Edm.String" MaxLength="40" sap:label="Степень родства" sap:quickinfo="Обозначение подтипа" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="relat_id" Type="Edm.String" MaxLength="4" sap:display-format="UpperCase" sap:label="Код Степени родства" sap:quickinfo="Более точно не опр. область, возм. исп. для уровня &quot;заплат&quot;"/>
                 <Property Name="relat_degree" Type="Edm.String" MaxLength="80" sap:label="Степень родства"/>
                 <Property Name="relat_fio" Type="Edm.String" MaxLength="120" sap:label="Фамилия" sap:quickinfo="ФИО"/>
+                <Property Name="relat_work" Type="Edm.String" MaxLength="180" sap:label="Подразделение, должность" sap:quickinfo="Место работы, должность"/>
                 <Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key"/>
                 <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата создания черновика"/>
                 <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата последнего изменения черновика"/>
@@ -407,8 +413,8 @@
                 <Property Name="Validation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="uuid" Type="Edm.Guid" Nullable="false" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
                 <Property Name="uuid_candidate" Type="Edm.Guid" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
-                <Property Name="name_profess" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Char80" sap:quickinfo="Char 80"/>
-                <Property Name="id_profess" Type="Edm.String" MaxLength="12" sap:label="Профессия" sap:quickinfo="Код объекта"/>
+                <Property Name="name_profess" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Профессия" sap:quickinfo="Char 80"/>
+                <Property Name="id_profess" Type="Edm.String" MaxLength="12" sap:label="Код объекта"/>
                 <Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key"/>
                 <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата создания черновика"/>
                 <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата последнего изменения черновика"/>
@@ -494,7 +500,7 @@
                 <Key>
                     <PropertyRef Name="bland"/>
                 </Key>
-                <Property Name="bland" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase" sap:text="bezei" sap:label="Регион" sap:quickinfo="Регион (штат, федер. земля, провинция, область, графство)"/>
+                <Property Name="bland" Type="Edm.String" Nullable="false" MaxLength="3" sap:display-format="UpperCase" sap:text="bezei"/>
                 <Property Name="bezei" Type="Edm.String" MaxLength="20" sap:label="Область" sap:quickinfo="Название"/>
                 <Property Name="land1" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Код страны"/>
             </EntityType>
@@ -599,14 +605,6 @@
             <Association Name="assoc_FB2DFDBCFA138B72B404DA3638C3FEA7" sap:content-version="1">
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType" Multiplicity="1" Role="FromRole_assoc_FB2DFDBCFA138B72B404DA3638C3FEA7"/>
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_CATEGORY_VHType" Multiplicity="0..1" Role="ToRole_assoc_FB2DFDBCFA138B72B404DA3638C3FEA7"/>
-                <ReferentialConstraint>
-                    <Principal Role="ToRole_assoc_FB2DFDBCFA138B72B404DA3638C3FEA7">
-                        <PropertyRef Name="id"/>
-                    </Principal>
-                    <Dependent Role="FromRole_assoc_FB2DFDBCFA138B72B404DA3638C3FEA7">
-                        <PropertyRef Name="id_category"/>
-                    </Dependent>
-                </ReferentialConstraint>
             </Association>
             <Association Name="assoc_05E49C576AE8996677C7877FD5B65988" sap:content-version="1">
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_LAST_WORKType" Multiplicity="1" Role="FromRole_assoc_05E49C576AE8996677C7877FD5B65988"/>
@@ -752,6 +750,10 @@
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_FAMILYType" Multiplicity="1" Role="FromRole_assoc_5A7FB12F9D1CDE226B324F8FC8625D93"/>
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="0..1" Role="ToRole_assoc_5A7FB12F9D1CDE226B324F8FC8625D93"/>
             </Association>
+            <Association Name="assoc_3FEBE96EFB6C424021F775CA31D9B83C" sap:content-version="1">
+                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_FAMILYType" Multiplicity="1" Role="FromRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C"/>
+                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_TYPE_RELAT_VHType" Multiplicity="0..1" Role="ToRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C"/>
+            </Association>
             <Association Name="assoc_88715775598BC14C3D137647082B65B2" sap:content-version="1">
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_LANGUAGEType" Multiplicity="1" Role="FromRole_assoc_88715775598BC14C3D137647082B65B2"/>
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.I_DraftAdministrativeDataType" Multiplicity="0..1" Role="ToRole_assoc_88715775598BC14C3D137647082B65B2"/>
@@ -794,7 +796,7 @@
                 <EntitySet Name="ZHR_I_FAMILY_STAT_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_FAMILY_STAT_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZHR_I_LEVEL_LANG_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_LEVEL_LANG_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZHR_I_NAME_LANGU" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_NAME_LANGUType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
-                <EntitySet Name="ZHR_I_REGION_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_REGION_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
+                <EntitySet Name="ZHR_I_REGION_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_REGION_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
                 <EntitySet Name="ZHR_I_TYPE_RELAT_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_TYPE_RELAT_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="zhr_c_recruitment_log" EntityType="ZHR_C_CANDIDATEHEADER_CDS.zhr_c_recruitment_logType" sap:content-version="1"/>
                 <AssociationSet Name="assoc_7225EEF53197D2C6DAB54F8A2AFB0256" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_7225EEF53197D2C6DAB54F8A2AFB0256" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
@@ -836,6 +838,10 @@
                 <AssociationSet Name="assoc_89B90CCEEB719905F6BA2BF00CC53114" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_89B90CCEEB719905F6BA2BF00CC53114" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="ZHR_C_CANDIDATE_LAST_WORK" Role="FromRole_assoc_89B90CCEEB719905F6BA2BF00CC53114"/>
                     <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="ToRole_assoc_89B90CCEEB719905F6BA2BF00CC53114"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_3FEBE96EFB6C424021F775CA31D9B83C" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_3FEBE96EFB6C424021F775CA31D9B83C" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZHR_C_CANDIDATE_FAMILY" Role="FromRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C"/>
+                    <End EntitySet="ZHR_I_TYPE_RELAT_VH" Role="ToRole_assoc_3FEBE96EFB6C424021F775CA31D9B83C"/>
                 </AssociationSet>
                 <AssociationSet Name="assoc_E2A4DB43244D6304D983783A4D655F32" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_E2A4DB43244D6304D983783A4D655F32" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="FromRole_assoc_E2A4DB43244D6304D983783A4D655F32"/>
@@ -1294,23 +1300,6 @@
                     <Collection>
                         <String>ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADER_CDS_Entities/ZHR_C_CANDIDATEHEADER</String>
                     </Collection>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType/id_category" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.ValueList">
-                    <Record>
-                        <PropertyValue Property="Label" String="Справочник Категории ВУ"/>
-                        <PropertyValue Property="CollectionPath" String="ZHR_I_CATEGORY_VH"/>
-                        <PropertyValue Property="SearchSupported" Bool="false"/>
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="id_category"/>
-                                    <PropertyValue Property="ValueListProperty" String="id"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
                 </Annotation>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
