@@ -214,6 +214,13 @@
                                 },
                                 "entitySet": "ZHR_C_DESIRED_PROFESSION",
                                 "navigationProperty": "to_CandidateDesired"
+                            },
+                            "ObjectPage|ZHR_C_WORKING_CONDITIONS": {
+                                "component": {
+                                    "name": "sap.suite.ui.generic.template.ObjectPage"
+                                },
+                                "entitySet": "ZHR_C_WORKING_CONDITIONS",
+                                "navigationProperty": "to_CandidateWorkCond"
                             }
                         }
                     }
