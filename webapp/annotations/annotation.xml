@@ -324,13 +324,6 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="level_name" />
                                     <PropertyValue Property="ValueListProperty" String="Description" />
                                 </Record>
-                                <Record Type="Common.ValueListParameterOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="prof_level" />
-                                    <PropertyValue Property="ValueListProperty" String="ID" />
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="Description" />
-                                </Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -370,20 +363,15 @@
                     <Record Type="Common.ValueListType">
                         <PropertyValue Property="Label" String="Наименование" />
                         <PropertyValue Property="CollectionPath" String="ZHR_I_NAME_LANGU" />
-                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="SearchSupported" Bool="false" />
                         <PropertyValue Property="Parameters">
                             <Collection>
                                 <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="name_language" />
                                     <PropertyValue Property="ValueListProperty" String="Description" />
                                 </Record>
-                                <Record Type="Common.ValueListParameterOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="lang_id" />
-                                    <PropertyValue Property="ValueListProperty" String="objid" />
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="Description" />
-                                </Record>
+                               
+                          
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -438,7 +426,7 @@
                 </Annotation>
             </Annotations>
 
-            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/land1">
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/landx">
                 <Annotation Term="Common.Text" Path="to_CountryVH/Landx50">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
                 </Annotation>
@@ -450,19 +438,17 @@
                         <PropertyValue Property="Parameters">
                             <Collection>
                                 <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="land1" />
-                                    <PropertyValue Property="ValueListProperty" String="land1" />
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="landx" />
                                     <PropertyValue Property="ValueListProperty" String="Landx50" />
                                 </Record>
+                              
                             </Collection>
                         </PropertyValue>
                     </Record>
                 </Annotation>
             </Annotations>
 
-            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/land1f">
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/landxf">
                 <Annotation Term="Common.Text" Path="to_CountryFVH/Landx50">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
                 </Annotation>
@@ -474,19 +460,17 @@
                         <PropertyValue Property="Parameters">
                             <Collection>
                                 <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="land1f" />
-                                    <PropertyValue Property="ValueListProperty" String="land1" />
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="landxf" />
                                     <PropertyValue Property="ValueListProperty" String="Landx50" />
                                 </Record>
+                             
                             </Collection>
                         </PropertyValue>
                     </Record>
                 </Annotation>
             </Annotations>
 
-            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/state">
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/state_name">
                 <Annotation Term="Common.Text" Path="to_RegionVH/bezei">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
                 </Annotation>
@@ -498,23 +482,24 @@
                         <PropertyValue Property="Parameters">
                             <Collection>
                                 <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="state" />
-                                    <PropertyValue Property="ValueListProperty" String="bland" />
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="state_name" />
+                                    <PropertyValue Property="ValueListProperty" String="bezei" />
                                 </Record>
                                 <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="land1" />
                                     <PropertyValue Property="ValueListProperty" String="land1" />
                                 </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
+                               <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="bezei" />
                                 </Record>
+                                
                             </Collection>
                         </PropertyValue>
                     </Record>
                 </Annotation>
             </Annotations>
 
-            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/statef">
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/statef_name">
                 <Annotation Term="Common.Text" Path="to_RegionFVH/bezei">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
                 </Annotation>
@@ -526,16 +511,19 @@
                         <PropertyValue Property="Parameters">
                             <Collection>
                                 <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="statef" />
-                                    <PropertyValue Property="ValueListProperty" String="bland" />
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="statef_name" />
+                                    <PropertyValue Property="ValueListProperty" String="bezei" />
                                 </Record>
                                 <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="land1f" />
                                     <PropertyValue Property="ValueListProperty" String="land1" />
                                 </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
+
+                               <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="bezei" />
                                 </Record>
+                            
+                             
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -558,16 +546,9 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="name_category" />
                                     <PropertyValue Property="ValueListProperty" String="name" />
                                 </Record>
-                                  <Record Type="Common.ValueListParameterOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="id_category" />
-                                    <PropertyValue Property="ValueListProperty" String="id" />
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="name" />
-                                </Record>
                             </Collection>
                         </PropertyValue>
-                        <PropertyValue Property="Label" String="Категория" />
+                     <PropertyValue Property="Label" String="Категория"/>
                     </Record>
                 </Annotation>
             </Annotations>
@@ -588,13 +569,8 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="relat_degree"/>
                                     <PropertyValue Property="ValueListProperty" String="Description"/>
                                 </Record>
-                                 <Record Type="Common.ValueListParameterOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="relat_id"/>
-                                    <PropertyValue Property="ValueListProperty" String="ID"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="Description"/>
-                                </Record>
+                             
+                             
                             </Collection>
                         </PropertyValue>
                         <PropertyValue Property="Label" String="Степень родства"/>
@@ -644,13 +620,8 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="relat_degree"/>
                                     <PropertyValue Property="ValueListProperty" String="Description"/>
                                 </Record>
-                                 <Record Type="Common.ValueListParameterOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="relat_id"/>
-                                    <PropertyValue Property="ValueListProperty" String="ID"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="Description"/>
-                                </Record>
+                             
+                               
                             </Collection>
                         </PropertyValue>
                         <PropertyValue Property="Label" String="Степень родства"/>

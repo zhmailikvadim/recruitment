@@ -153,10 +153,10 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="land1"/>
+                                    <PropertyValue Property="Value" Path="landx"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="state"/>
+                                    <PropertyValue Property="Value" Path="state_name"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="ort01"/>
@@ -176,10 +176,10 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="land1f"/>
+                                    <PropertyValue Property="Value" Path="landxf"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="statef"/>
+                                    <PropertyValue Property="Value" Path="statef_name"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="ort01f"/>
@@ -746,9 +746,6 @@
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="job"/>
                                 </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="relat_id"/>
-                                </Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -792,10 +789,6 @@
                         </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="job"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="relat_id"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                     </Collection>
@@ -1136,9 +1129,6 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="relat_id"/>
-                                </Record>
-                                <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="relat_degree"/>
                                 </Record>
                                 <Record Type="UI.DataField">
@@ -1170,10 +1160,6 @@
                 </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="relat_id"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="relat_degree"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
@@ -1431,9 +1417,6 @@
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_LEVEL_LANG_VHType">
-                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
-            </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_NAME_LANGUType/objid">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
@@ -1446,13 +1429,6 @@
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_REGION_VHType">
-                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_TYPE_RELAT_VHType/ID">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_TYPE_RELAT_VHType">
                 <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.zhr_c_recruitment_logType/ActiveUUID">
