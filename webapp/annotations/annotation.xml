@@ -103,6 +103,11 @@
                             <PropertyValue Property="ID" String="DES" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Условия труда" />
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateWorkCond/@UI.LineItem" />
+                            <PropertyValue Property="ID" String="WORKCO" />
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SAL" />
                             <PropertyValue Property="Label" String="" />
                             <PropertyValue Property="ID" String="SL" />
@@ -111,6 +116,16 @@
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SIK" />
                             <PropertyValue Property="Label" String="" />
                             <PropertyValue Property="ID" String="SL1" />
+                        </Record>
+                            <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#FAM" />
+                            <PropertyValue Property="Label" String="Семейное положение" />
+                            <PropertyValue Property="ID" String="FAMI" />
+                        </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateFamily/@UI.LineItem" />
+                            <PropertyValue Property="Label" String="Сведения о семье" />
+                            <PropertyValue Property="ID" String="FAMILY" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#REL" />
@@ -127,16 +142,7 @@
                             <PropertyValue Property="Label" String="Администр./Уголовная Ответств." />
                             <PropertyValue Property="ID" String="RESPON" />
                         </Record>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#FAM" />
-                            <PropertyValue Property="Label" String="Семейное положение" />
-                            <PropertyValue Property="ID" String="FAMI" />
-                        </Record>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="to_CandidateFamily/@UI.LineItem" />
-                            <PropertyValue Property="Label" String="Сведения о семье" />
-                            <PropertyValue Property="ID" String="FAMILY" />
-                        </Record>
+                   
 
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ADDRESS" />
@@ -240,6 +246,20 @@
                     </Collection>
                 </Annotation>
             </Annotations>
+            
+        <Annotations Target="SAP.ZHR_C_WORKING_CONDITIONSType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Условия труда" />
+                            <PropertyValue Property="ID" String="DWORK" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#WCOND" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
+
             <Annotations Target="SAP.ZHR_C_CANDIDATE_LAST_WORKType">
                 <Annotation Term="UI.Facets">
                     <Collection>
@@ -441,6 +461,11 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="landx" />
                                     <PropertyValue Property="ValueListProperty" String="Landx50" />
                                 </Record>
+
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="land1" />
+                                    <PropertyValue Property="ValueListProperty" String="land1" />
+                                </Record>
                               
                             </Collection>
                         </PropertyValue>
@@ -462,6 +487,11 @@
                                 <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="landxf" />
                                     <PropertyValue Property="ValueListProperty" String="Landx50" />
+                                </Record>
+
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="land1f" />
+                                    <PropertyValue Property="ValueListProperty" String="land1" />
                                 </Record>
                              
                             </Collection>
@@ -489,9 +519,7 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="land1" />
                                     <PropertyValue Property="ValueListProperty" String="land1" />
                                 </Record>
-                               <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="bezei" />
-                                </Record>
+                             
                                 
                             </Collection>
                         </PropertyValue>
@@ -519,9 +547,7 @@
                                     <PropertyValue Property="ValueListProperty" String="land1" />
                                 </Record>
 
-                               <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="bezei" />
-                                </Record>
+                              
                             
                              
                             </Collection>
@@ -593,10 +619,7 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="name_profess"/>
                                     <PropertyValue Property="ValueListProperty" String="stext"/>
                                 </Record>
-                                <Record Type="Common.ValueListParameterOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="id_profess"/>
-                                    <PropertyValue Property="ValueListProperty" String="short"/>
-                                </Record>
+                           
                             </Collection>
                         </PropertyValue>
                         <PropertyValue Property="Label" String="Профессия"/>
