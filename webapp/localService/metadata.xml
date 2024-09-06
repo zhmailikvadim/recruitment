@@ -46,13 +46,13 @@
                 <Property Name="comp_programs" Type="Edm.String" MaxLength="200" sap:display-format="UpperCase" sap:label="Какими программами владеете" sap:quickinfo="Поле текста, длина 200"/>
                 <Property Name="cand_professional" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Char80" sap:quickinfo="Char 80"/>
                 <Property Name="work_condition" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="30 знаков" sap:heading=""/>
-                <Property Name="work_condition_id" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="Условия труда" sap:quickinfo="Двузначный номер"/>
+                <Property Name="work_condition_id" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="Двузначный номер"/>
                 <Property Name="cand_relocate" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Готовность к командировкам, %" sap:quickinfo="30 знаков"/>
-                <Property Name="business_trip" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Счетчик" sap:quickinfo="Параметры подсчета"/>
+                <Property Name="business_trip" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Код Готовность к переезду" sap:quickinfo="Параметры подсчета"/>
                 <Property Name="business_trip_id" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Вид занятости" sap:quickinfo="Параметры подсчета"/>
                 <Property Name="histo" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Запись в историю" sap:quickinfo="Индикатор записи в историю"/>
-                <Property Name="business_trip_check" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Готовность к переезду" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
-                <Property Name="business_trip_sever" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Готовность к раб. в р-не Крайнего Севера" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="business_trip_check" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Готовность к переезду" sap:quickinfo="Char 80"/>
+                <Property Name="business_trip_sever" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Готовность к раб. в р-не Крайнего Севера" sap:quickinfo="Char 80"/>
                 <Property Name="rsign" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Соединение" sap:quickinfo="Характеристика соединения"/>
                 <Property Name="relat" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Соединение/объект" sap:quickinfo="Соединение между объектами" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="istat" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Статус плана" sap:quickinfo="Статус планирования" sap:creatable="false" sap:updatable="false"/>
@@ -196,7 +196,6 @@
                 <NavigationProperty Name="to_CandidateSeminar" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_5D7FA346DDB614F43A4830B5D6421A8F" FromRole="FromRole_assoc_5D7FA346DDB614F43A4830B5D6421A8F" ToRole="ToRole_assoc_5D7FA346DDB614F43A4830B5D6421A8F"/>
                 <NavigationProperty Name="to_CandidateWorkCond" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_EA7220B64D2B4063EE3FCF4157EFB759" FromRole="FromRole_assoc_EA7220B64D2B4063EE3FCF4157EFB759" ToRole="ToRole_assoc_EA7220B64D2B4063EE3FCF4157EFB759"/>
                 <NavigationProperty Name="to_ComputerLevelVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_746E3394D8895A840EA7273825303B52" FromRole="FromRole_assoc_746E3394D8895A840EA7273825303B52" ToRole="ToRole_assoc_746E3394D8895A840EA7273825303B52"/>
-                <NavigationProperty Name="to_CondWorkVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_73EEB5E9A586448E9891D8EB18BBB876" FromRole="FromRole_assoc_73EEB5E9A586448E9891D8EB18BBB876" ToRole="ToRole_assoc_73EEB5E9A586448E9891D8EB18BBB876"/>
                 <NavigationProperty Name="to_CountryFVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_E2A4DB43244D6304D983783A4D655F32" FromRole="FromRole_assoc_E2A4DB43244D6304D983783A4D655F32" ToRole="ToRole_assoc_E2A4DB43244D6304D983783A4D655F32"/>
                 <NavigationProperty Name="to_CountryVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_E7F76E44A336FA6787D4CCB08AE048EF" FromRole="FromRole_assoc_E7F76E44A336FA6787D4CCB08AE048EF" ToRole="ToRole_assoc_E7F76E44A336FA6787D4CCB08AE048EF"/>
                 <NavigationProperty Name="to_EducTypeVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_A21ABD1BBDDEA0D83A8F06319D5D7690" FromRole="FromRole_assoc_A21ABD1BBDDEA0D83A8F06319D5D7690" ToRole="ToRole_assoc_A21ABD1BBDDEA0D83A8F06319D5D7690"/>
@@ -204,6 +203,7 @@
                 <NavigationProperty Name="to_RecruitmentLog" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_68479B0C4E30E44EBCBF70F65152D3C4" FromRole="FromRole_assoc_68479B0C4E30E44EBCBF70F65152D3C4" ToRole="ToRole_assoc_68479B0C4E30E44EBCBF70F65152D3C4"/>
                 <NavigationProperty Name="to_RegionFVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_683BE858479DEE4A17048EC970B2ED0D" FromRole="FromRole_assoc_683BE858479DEE4A17048EC970B2ED0D" ToRole="ToRole_assoc_683BE858479DEE4A17048EC970B2ED0D"/>
                 <NavigationProperty Name="to_RegionVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_DE160782C607E3B64CFA9716F997DD19" FromRole="FromRole_assoc_DE160782C607E3B64CFA9716F997DD19" ToRole="ToRole_assoc_DE160782C607E3B64CFA9716F997DD19"/>
+                <NavigationProperty Name="to_RelocVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_ABE44D3347FF6214EC1B52EEC55D4E53" FromRole="FromRole_assoc_ABE44D3347FF6214EC1B52EEC55D4E53" ToRole="ToRole_assoc_ABE44D3347FF6214EC1B52EEC55D4E53"/>
             </EntityType>
             <EntityType Name="ZHR_C_CANDIDATE_DRIVERType" sap:label="Категория Водительских прав Consumption" sap:content-version="1">
                 <Key>
@@ -449,6 +449,7 @@
                 <NavigationProperty Name="DraftAdministrativeData" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_23509C80A00A30F5DCD82C7BDE47131A" FromRole="FromRole_assoc_23509C80A00A30F5DCD82C7BDE47131A" ToRole="ToRole_assoc_23509C80A00A30F5DCD82C7BDE47131A"/>
                 <NavigationProperty Name="SiblingEntity" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_8B885712725F8C594394A13624C51889" FromRole="FromRole_assoc_8B885712725F8C594394A13624C51889" ToRole="ToRole_assoc_8B885712725F8C594394A13624C51889"/>
                 <NavigationProperty Name="to_CandidateHeader" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_10EB86948532BDFDD89236EF9549B4FA" FromRole="FromRole_assoc_10EB86948532BDFDD89236EF9549B4FA" ToRole="ToRole_assoc_10EB86948532BDFDD89236EF9549B4FA"/>
+                <NavigationProperty Name="to_CondWorkVH" Relationship="ZHR_C_CANDIDATEHEADER_CDS.assoc_89B94D7A25052A4F83CC168DE1156DB8" FromRole="FromRole_assoc_89B94D7A25052A4F83CC168DE1156DB8" ToRole="ToRole_assoc_89B94D7A25052A4F83CC168DE1156DB8"/>
             </EntityType>
             <EntityType Name="ZHR_I_BUSIN_TRIP_VHType" sap:label="Готовность к командировке" sap:content-version="1">
                 <Key>
@@ -473,10 +474,10 @@
             </EntityType>
             <EntityType Name="ZHR_I_COND_WORK_VHType" sap:label="Условия труда" sap:content-version="1">
                 <Key>
-                    <PropertyRef Name="EmploymentFract"/>
+                    <PropertyRef Name="Description"/>
                 </Key>
-                <Property Name="EmploymentFract" Type="Edm.String" Nullable="false" MaxLength="2" sap:display-format="NonNegative" sap:text="Description" sap:label="Степень занятости"/>
-                <Property Name="Description" Type="Edm.String" MaxLength="30" sap:label="Степень занятости" sap:quickinfo="Название степени занятости"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="80" sap:label="Условия труда" sap:quickinfo="Наименование организации для заявки на поиск"/>
+                <Property Name="conid" Type="Edm.String" MaxLength="4" sap:label="Код предприятия" sap:quickinfo="Коды предприятий размещающих заявки на поиск"/>
             </EntityType>
             <EntityType Name="ZHR_I_COUNTRY_VHType" sap:label="Справочник Страна" sap:content-version="1">
                 <Key>
@@ -527,6 +528,13 @@
                 <Property Name="bezei" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Область" sap:quickinfo="Название"/>
                 <Property Name="bland" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase"/>
                 <Property Name="land1" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Код страны"/>
+            </EntityType>
+            <EntityType Name="ZHR_I_RELOCATION_VHType" sap:label="Справочник Готовность к переезду" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Более точно не опр. область, возм. исп. для уровня &quot;заплат&quot;"/>
+                <Property Name="Name" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Переезд" sap:quickinfo="Char 80"/>
             </EntityType>
             <EntityType Name="ZHR_I_TYPE_RELAT_VHType" sap:label="Справочник степень родства" sap:content-version="1">
                 <Key>
@@ -625,6 +633,10 @@
             <Association Name="assoc_10EB86948532BDFDD89236EF9549B4FA" sap:content-version="1">
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType" Multiplicity="1" Role="FromRole_assoc_10EB86948532BDFDD89236EF9549B4FA"/>
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="0..1" Role="ToRole_assoc_10EB86948532BDFDD89236EF9549B4FA"/>
+            </Association>
+            <Association Name="assoc_89B94D7A25052A4F83CC168DE1156DB8" sap:content-version="1">
+                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType" Multiplicity="1" Role="FromRole_assoc_89B94D7A25052A4F83CC168DE1156DB8"/>
+                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COND_WORK_VHType" Multiplicity="0..1" Role="ToRole_assoc_89B94D7A25052A4F83CC168DE1156DB8"/>
             </Association>
             <Association Name="assoc_0FC778124B325E69E2F3D87640D9B06E" sap:content-version="1">
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType" Multiplicity="1" Role="FromRole_assoc_0FC778124B325E69E2F3D87640D9B06E"/>
@@ -730,10 +742,6 @@
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="1" Role="FromRole_assoc_746E3394D8895A840EA7273825303B52"/>
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COMPUTER_LEVEL_VHType" Multiplicity="0..1" Role="ToRole_assoc_746E3394D8895A840EA7273825303B52"/>
             </Association>
-            <Association Name="assoc_73EEB5E9A586448E9891D8EB18BBB876" sap:content-version="1">
-                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="1" Role="FromRole_assoc_73EEB5E9A586448E9891D8EB18BBB876"/>
-                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COND_WORK_VHType" Multiplicity="0..1" Role="ToRole_assoc_73EEB5E9A586448E9891D8EB18BBB876"/>
-            </Association>
             <Association Name="assoc_E2A4DB43244D6304D983783A4D655F32" sap:content-version="1">
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="1" Role="FromRole_assoc_E2A4DB43244D6304D983783A4D655F32"/>
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COUNTRY_VHType" Multiplicity="0..1" Role="ToRole_assoc_E2A4DB43244D6304D983783A4D655F32"/>
@@ -761,6 +769,10 @@
             <Association Name="assoc_DE160782C607E3B64CFA9716F997DD19" sap:content-version="1">
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="1" Role="FromRole_assoc_DE160782C607E3B64CFA9716F997DD19"/>
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_REGION_VHType" Multiplicity="0..1" Role="ToRole_assoc_DE160782C607E3B64CFA9716F997DD19"/>
+            </Association>
+            <Association Name="assoc_ABE44D3347FF6214EC1B52EEC55D4E53" sap:content-version="1">
+                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="1" Role="FromRole_assoc_ABE44D3347FF6214EC1B52EEC55D4E53"/>
+                <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_RELOCATION_VHType" Multiplicity="0..1" Role="ToRole_assoc_ABE44D3347FF6214EC1B52EEC55D4E53"/>
             </Association>
             <Association Name="assoc_F1D7B6237AE309C77B5F920FCC0983CF" sap:content-version="1">
                 <End Type="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType" Multiplicity="1" Role="FromRole_assoc_F1D7B6237AE309C77B5F920FCC0983CF"/>
@@ -838,6 +850,7 @@
                 <EntitySet Name="ZHR_I_LEVEL_LANG_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_LEVEL_LANG_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
                 <EntitySet Name="ZHR_I_NAME_LANGU" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_NAME_LANGUType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZHR_I_REGION_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_REGION_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
+                <EntitySet Name="ZHR_I_RELOCATION_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_RELOCATION_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="ZHR_I_TYPE_RELAT_VH" EntityType="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_TYPE_RELAT_VHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1"/>
                 <EntitySet Name="zhr_c_recruitment_log" EntityType="ZHR_C_CANDIDATEHEADER_CDS.zhr_c_recruitment_logType" sap:content-version="1"/>
                 <AssociationSet Name="assoc_7225EEF53197D2C6DAB54F8A2AFB0256" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_7225EEF53197D2C6DAB54F8A2AFB0256" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
@@ -912,10 +925,6 @@
                     <End EntitySet="ZHR_C_CANDIDATE_LAST_WORK" Role="FromRole_assoc_055E162006034FD7BB8AA0F18F303425"/>
                     <End EntitySet="ZHR_C_CANDIDATE_LAST_WORK" Role="ToRole_assoc_055E162006034FD7BB8AA0F18F303425"/>
                 </AssociationSet>
-                <AssociationSet Name="assoc_73EEB5E9A586448E9891D8EB18BBB876" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_73EEB5E9A586448E9891D8EB18BBB876" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="FromRole_assoc_73EEB5E9A586448E9891D8EB18BBB876"/>
-                    <End EntitySet="ZHR_I_COND_WORK_VH" Role="ToRole_assoc_73EEB5E9A586448E9891D8EB18BBB876"/>
-                </AssociationSet>
                 <AssociationSet Name="assoc_1AAC87C5A1D1BBA6066D2C8B98947DCC" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_1AAC87C5A1D1BBA6066D2C8B98947DCC" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="FromRole_assoc_1AAC87C5A1D1BBA6066D2C8B98947DCC"/>
                     <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="ToRole_assoc_1AAC87C5A1D1BBA6066D2C8B98947DCC"/>
@@ -923,6 +932,10 @@
                 <AssociationSet Name="assoc_8B885712725F8C594394A13624C51889" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_8B885712725F8C594394A13624C51889" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="ZHR_C_WORKING_CONDITIONS" Role="FromRole_assoc_8B885712725F8C594394A13624C51889"/>
                     <End EntitySet="ZHR_C_WORKING_CONDITIONS" Role="ToRole_assoc_8B885712725F8C594394A13624C51889"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_ABE44D3347FF6214EC1B52EEC55D4E53" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_ABE44D3347FF6214EC1B52EEC55D4E53" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="FromRole_assoc_ABE44D3347FF6214EC1B52EEC55D4E53"/>
+                    <End EntitySet="ZHR_I_RELOCATION_VH" Role="ToRole_assoc_ABE44D3347FF6214EC1B52EEC55D4E53"/>
                 </AssociationSet>
                 <AssociationSet Name="assoc_05E49C576AE8996677C7877FD5B65988" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_05E49C576AE8996677C7877FD5B65988" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="ZHR_C_CANDIDATE_LAST_WORK" Role="FromRole_assoc_05E49C576AE8996677C7877FD5B65988"/>
@@ -1007,6 +1020,10 @@
                 <AssociationSet Name="assoc_003B7A665A5852982F6B67F50B85C6B0" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_003B7A665A5852982F6B67F50B85C6B0" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="ZHR_C_CANDIDATE_EDUCATION" Role="FromRole_assoc_003B7A665A5852982F6B67F50B85C6B0"/>
                     <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="ToRole_assoc_003B7A665A5852982F6B67F50B85C6B0"/>
+                </AssociationSet>
+                <AssociationSet Name="assoc_89B94D7A25052A4F83CC168DE1156DB8" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_89B94D7A25052A4F83CC168DE1156DB8" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="ZHR_C_WORKING_CONDITIONS" Role="FromRole_assoc_89B94D7A25052A4F83CC168DE1156DB8"/>
+                    <End EntitySet="ZHR_I_COND_WORK_VH" Role="ToRole_assoc_89B94D7A25052A4F83CC168DE1156DB8"/>
                 </AssociationSet>
                 <AssociationSet Name="assoc_F1D7B6237AE309C77B5F920FCC0983CF" Association="ZHR_C_CANDIDATEHEADER_CDS.assoc_F1D7B6237AE309C77B5F920FCC0983CF" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
                     <End EntitySet="ZHR_C_CANDIDATEHEADER" Role="FromRole_assoc_F1D7B6237AE309C77B5F920FCC0983CF"/>
