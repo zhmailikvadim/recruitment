@@ -86,10 +86,6 @@
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType/business_trip">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType/land1">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
@@ -149,6 +145,7 @@
                 <Annotation Term="UI.MultiLineText"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType/comp_level"/>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType/business_trip"/>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADERType">
                 <Annotation Term="UI.DataPoint" Qualifier="nachn">
                     <Record>
@@ -381,9 +378,6 @@
                             <Collection>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="min_salary"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="business_trip_check"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="business_trip"/>

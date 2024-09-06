@@ -48,10 +48,10 @@
                 <Property Name="work_condition" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="30 знаков" sap:heading=""/>
                 <Property Name="work_condition_id" Type="Edm.String" MaxLength="2" sap:display-format="NonNegative" sap:label="Двузначный номер"/>
                 <Property Name="cand_relocate" Type="Edm.String" MaxLength="30" sap:display-format="UpperCase" sap:label="Готовность к командировкам, %" sap:quickinfo="30 знаков"/>
-                <Property Name="business_trip" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Код Готовность к переезду" sap:quickinfo="Параметры подсчета"/>
+                <Property Name="business_trip" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Готовность к переезду" sap:quickinfo="Параметры подсчета"/>
                 <Property Name="business_trip_id" Type="Edm.String" MaxLength="4" sap:display-format="NonNegative" sap:label="Вид занятости" sap:quickinfo="Параметры подсчета"/>
                 <Property Name="histo" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Запись в историю" sap:quickinfo="Индикатор записи в историю"/>
-                <Property Name="business_trip_check" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Готовность к переезду" sap:quickinfo="Char 80"/>
+                <Property Name="business_trip_check" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Char80" sap:quickinfo="Char 80"/>
                 <Property Name="business_trip_sever" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Готовность к раб. в р-не Крайнего Севера" sap:quickinfo="Char 80"/>
                 <Property Name="rsign" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Соединение" sap:quickinfo="Характеристика соединения"/>
                 <Property Name="relat" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Соединение/объект" sap:quickinfo="Соединение между объектами" sap:creatable="false" sap:updatable="false"/>
@@ -533,7 +533,7 @@
                 <Key>
                     <PropertyRef Name="Id"/>
                 </Key>
-                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="UpperCase" sap:label="" sap:quickinfo="Более точно не опр. область, возм. исп. для уровня &quot;заплат&quot;"/>
+                <Property Name="Id" Type="Edm.String" Nullable="false" MaxLength="4" sap:display-format="NonNegative" sap:text="Name" sap:label="Счетчик" sap:quickinfo="Параметры подсчета"/>
                 <Property Name="Name" Type="Edm.String" MaxLength="80" sap:display-format="UpperCase" sap:label="Переезд" sap:quickinfo="Char 80"/>
             </EntityType>
             <EntityType Name="ZHR_I_TYPE_RELAT_VHType" sap:label="Справочник степень родства" sap:content-version="1">

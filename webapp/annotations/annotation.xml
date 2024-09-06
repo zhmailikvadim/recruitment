@@ -117,7 +117,7 @@
                             <PropertyValue Property="Label" String="" />
                             <PropertyValue Property="ID" String="SL1" />
                         </Record>
-                            <Record Type="UI.ReferenceFacet">
+                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#FAM" />
                             <PropertyValue Property="Label" String="Семейное положение" />
                             <PropertyValue Property="ID" String="FAMI" />
@@ -142,7 +142,7 @@
                             <PropertyValue Property="Label" String="Администр./Уголовная Ответств." />
                             <PropertyValue Property="ID" String="RESPON" />
                         </Record>
-                   
+
 
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#ADDRESS" />
@@ -159,7 +159,7 @@
                             <PropertyValue Property="Label" String="Интересы" />
                             <PropertyValue Property="ID" String="HOB" />
                         </Record>
-                       
+
                     </Collection>
                 </Annotation>
             </Annotations>
@@ -242,8 +242,8 @@
                     </Collection>
                 </Annotation>
             </Annotations>
-            
-        <Annotations Target="SAP.ZHR_C_WORKING_CONDITIONSType">
+
+            <Annotations Target="SAP.ZHR_C_WORKING_CONDITIONSType">
                 <Annotation Term="UI.Facets">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
@@ -386,8 +386,8 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="name_language" />
                                     <PropertyValue Property="ValueListProperty" String="Description" />
                                 </Record>
-                               
-                          
+
+
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -462,7 +462,7 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="land1" />
                                     <PropertyValue Property="ValueListProperty" String="land1" />
                                 </Record>
-                              
+
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -489,7 +489,7 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="land1f" />
                                     <PropertyValue Property="ValueListProperty" String="land1" />
                                 </Record>
-                             
+
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -515,8 +515,8 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="land1" />
                                     <PropertyValue Property="ValueListProperty" String="land1" />
                                 </Record>
-                             
-                                
+
+
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -543,9 +543,9 @@
                                     <PropertyValue Property="ValueListProperty" String="land1" />
                                 </Record>
 
-                              
-                            
-                             
+
+
+
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -570,7 +570,7 @@
                                 </Record>
                             </Collection>
                         </PropertyValue>
-                     <PropertyValue Property="Label" String="Категория"/>
+                        <PropertyValue Property="Label" String="Категория"/>
                     </Record>
                 </Annotation>
             </Annotations>
@@ -591,8 +591,8 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="relat_degree"/>
                                     <PropertyValue Property="ValueListProperty" String="Description"/>
                                 </Record>
-                             
-                             
+
+
                             </Collection>
                         </PropertyValue>
                         <PropertyValue Property="Label" String="Степень родства"/>
@@ -615,7 +615,7 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="name_profess"/>
                                     <PropertyValue Property="ValueListProperty" String="stext"/>
                                 </Record>
-                           
+
                             </Collection>
                         </PropertyValue>
                         <PropertyValue Property="Label" String="Профессия"/>
@@ -639,8 +639,8 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="relat_degree"/>
                                     <PropertyValue Property="ValueListProperty" String="Description"/>
                                 </Record>
-                             
-                               
+
+
                             </Collection>
                         </PropertyValue>
                         <PropertyValue Property="Label" String="Степень родства"/>
@@ -648,7 +648,7 @@
                 </Annotation>
             </Annotations>
 
-             <Annotations Target="SAP.ZHR_C_WORKING_CONDITIONSType/name_cond">
+            <Annotations Target="SAP.ZHR_C_WORKING_CONDITIONSType/name_cond">
                 <Annotation Term="Common.Text" Path="to_CondWorkVH/Description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
                 </Annotation>
@@ -664,9 +664,9 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="name_cond"/>
                                     <PropertyValue Property="ValueListProperty" String="Description"/>
                                 </Record>
-                           
-                             
-                               
+
+
+
                             </Collection>
                         </PropertyValue>
                         <PropertyValue Property="Label" String="Условия труда"/>
@@ -674,8 +674,8 @@
                 </Annotation>
             </Annotations>
 
-          <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/business_trip_check">
-                <Annotation Term="Common.Text" Path="to_RelocVH/name">
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/business_trip">
+                <Annotation Term="Common.Text" Path="to_RelocVH/Name">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
                 </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
@@ -686,22 +686,19 @@
                         <PropertyValue Property="Parameters">
                             <Collection>
                                 <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="business_trip_check" />
-                                    <PropertyValue Property="ValueListProperty" String="Name" />
-                                </Record>
-                                <Record Type="Common.ValueListParameterOut">
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="business_trip" />
                                     <PropertyValue Property="ValueListProperty" String="Id" />
                                 </Record>
-                               
-                              
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Name" />
+                                </Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
                 </Annotation>
             </Annotations>
 
-            
+
 
         </Schema>
     </edmx:DataServices>
