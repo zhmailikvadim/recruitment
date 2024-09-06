@@ -57,7 +57,7 @@
                             </PropertyValue>
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Специальные курсы, школы, стажировки, семинары" />
+                            <PropertyValue Property="Label" String="Дополнительное образование" />
                             <PropertyValue Property="ID" String="SEM1" />
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateSeminar/@UI.LineItem" />
                         </Record>
@@ -213,7 +213,7 @@
                 <Annotation Term="UI.Facets">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Специальные курсы, школы, стажировки, семинары" />
+                            <PropertyValue Property="Label" String="Дополнительное образование" />
                             <PropertyValue Property="ID" String="SM" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SEM" />
                         </Record>
@@ -419,7 +419,7 @@
             </Annotations>
 
             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/business_trip_id">
-                <Annotation Term="Common.Text" Path="to_CondWorkVH/Description">
+                <Annotation Term="Common.Text" Path="to_BusinTripVH/Description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
                 </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
@@ -436,6 +436,7 @@
                                 <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="Description" />
                                 </Record>
+                               
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -600,7 +601,9 @@
                 </Annotation>
             </Annotations>
 
-            <Annotations Target="SAP.ZHR_C_DESIRED_PROFESSIONType/name_profess">
+         
+
+              <Annotations Target="SAP.ZHR_C_DESIRED_PROFESSIONType/name_profess">
                 <Annotation Term="Common.Text" Path="to_DesiredProfVH/stext">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
                 </Annotation>
@@ -611,7 +614,8 @@
                         <PropertyValue Property="SearchSupported" Bool="true" />
                         <PropertyValue Property="Parameters">
                             <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
+                               
+                                 <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="name_profess"/>
                                     <PropertyValue Property="ValueListProperty" String="stext"/>
                                 </Record>
@@ -697,6 +701,59 @@
                     </Record>
                 </Annotation>
             </Annotations>
+
+             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/business_trip_sever_id">
+                <Annotation Term="Common.Text" Path="to_SeverVH/Name">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_SEVER_VH" />
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="business_trip_sever_id" />
+                                    <PropertyValue Property="ValueListProperty" String="Id" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Name" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            
+             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/academic_degree_id">
+                <Annotation Term="Common.Text" Path="to_DegreeVH/Name">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_DEGREE_VH" />
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="academic_degree_id" />
+                                    <PropertyValue Property="ValueListProperty" String="Id" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="Name" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+
+             
+
 
 
 
