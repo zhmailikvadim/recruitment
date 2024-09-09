@@ -98,7 +98,7 @@
                             <PropertyValue Property="ID" String="CATG" />
                         </Record>
                          <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Категория удостоверения" />
+                            <PropertyValue Property="Label" String="Категория удостоверения тракториста" />
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateTractor/@UI.LineItem" />
                             <PropertyValue Property="ID" String="TRAC" />
                         </Record>
@@ -776,7 +776,7 @@
             
              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/academic_degree_id">
                 <Annotation Term="Common.Text" Path="to_DegreeVH/Name">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst" />
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
                 </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
                 <Annotation Term="Common.ValueList">
@@ -789,10 +789,7 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="academic_degree_id" />
                                     <PropertyValue Property="ValueListProperty" String="Id" />
                                 </Record>
-                                 <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="education_type" />
-                                    <PropertyValue Property="ValueListProperty" String="Description" />
-                                </Record>
+                               
                                 <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="Name" />
                                 </Record>
