@@ -221,6 +221,13 @@
                                 },
                                 "entitySet": "ZHR_C_WORKING_CONDITIONS",
                                 "navigationProperty": "to_CandidateWorkCond"
+                            },
+                            "ObjectPage|ZHR_C_CANDIDATE_TRACTOR": {
+                                "component": {
+                                    "name": "sap.suite.ui.generic.template.ObjectPage"
+                                },
+                                "entitySet": "ZHR_C_CANDIDATE_TRACTOR",
+                                "navigationProperty": "to_CandidateTractor"
                             }
                         }
                     }

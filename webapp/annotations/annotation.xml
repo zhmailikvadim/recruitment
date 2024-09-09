@@ -97,6 +97,11 @@
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateDriver/@UI.LineItem" />
                             <PropertyValue Property="ID" String="CATG" />
                         </Record>
+                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Категория удостоверения" />
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateTractor/@UI.LineItem" />
+                            <PropertyValue Property="ID" String="TRAC" />
+                        </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Label" String="Желаемая профессия" />
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateDesired/@UI.LineItem" />
@@ -193,6 +198,18 @@
                             <PropertyValue Property="Label" String="Категория водительских прав" />
                             <PropertyValue Property="ID" String="PRV" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#CATG" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_TRACTORType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Категория удостоверения" />
+                            <PropertyValue Property="ID" String="PRV1" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TRAC" />
                         </Record>
                     </Collection>
                 </Annotation>
@@ -310,6 +327,7 @@
                 <Annotation Term="Common.ValueList">
                     <Record Type="Common.ValueListType">
                         <PropertyValue Property="CollectionPath" String="ZHR_I_EDUC_TYPE_VH" />
+                        <PropertyValue Property="SearchSupported" Bool="true" />
                         <PropertyValue Property="Parameters">
                             <Collection>
                                 <Record Type="Common.ValueListParameterInOut">
@@ -324,6 +342,7 @@
                     </Record>
                 </Annotation>
             </Annotations>
+
             <Annotations Target="SAP.ZHR_C_CANDIDATE_LANGUAGEType/level_name">
                 <Annotation Term="Common.Text" Path="to_EducLanguVH/Description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
@@ -576,6 +595,34 @@
                 </Annotation>
             </Annotations>
 
+
+
+           <Annotations Target="SAP.ZHR_C_CANDIDATE_TRACTORType/name_category">
+                <Annotation Term="Common.Text" Path="to_TractorVH/name">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
+
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_CANDIDATE_TRACTOR_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="name_category" />
+                                    <PropertyValue Property="ValueListProperty" String="name" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Категория удостоверения"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+
+
+
             <Annotations Target="SAP.ZHR_C_CANDIDATE_RELATIVESType/relat_degree">
                 <Annotation Term="Common.Text" Path="to_TypeRelatVH/Description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
@@ -729,7 +776,7 @@
             
              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/academic_degree_id">
                 <Annotation Term="Common.Text" Path="to_DegreeVH/Name">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst" />
                 </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
                 <Annotation Term="Common.ValueList">
@@ -742,6 +789,10 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="academic_degree_id" />
                                     <PropertyValue Property="ValueListProperty" String="Id" />
                                 </Record>
+                                 <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="education_type" />
+                                    <PropertyValue Property="ValueListProperty" String="Description" />
+                                </Record>
                                 <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="Name" />
                                 </Record>
@@ -751,6 +802,7 @@
                 </Annotation>
             </Annotations>
 
+             
 
              
 
