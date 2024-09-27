@@ -40,7 +40,7 @@
                                                 </Record>
                                             </Collection>
                                         </PropertyValue>
-                                        <PropertyValue Property="Label" String="Вид" />
+                                        <PropertyValue Property="Label" String="Основное образование" />
                                     </Record>
                                     <Record Type="UI.CollectionFacet">
                                         <PropertyValue Property="Facets">
@@ -113,6 +113,12 @@
                             <PropertyValue Property="ID" String="WORKCO" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#WORKCOND" />
+                            <PropertyValue Property="Label" String="Условия труда" />
+                            <PropertyValue Property="ID" String="WORKCOND1" />
+                        </Record>
+                      
+                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SAL" />
                             <PropertyValue Property="Label" String="" />
                             <PropertyValue Property="ID" String="SL" />
@@ -134,12 +140,12 @@
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#REL" />
-                            <PropertyValue Property="Label" String="Родственники" />
+                            <PropertyValue Property="Label" String="Родственники/свойственники" />
                             <PropertyValue Property="ID" String="RRL" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateRelat/@UI.LineItem" />
-                            <PropertyValue Property="Label" String="Сведения о родственниках" />
+                            <PropertyValue Property="Label" String="Сведения о родственниках/свойственниках" />
                             <PropertyValue Property="ID" String="RELAT" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
@@ -260,6 +266,8 @@
                 </Annotation>
             </Annotations>
 
+   
+
             <Annotations Target="SAP.ZHR_C_WORKING_CONDITIONSType">
                 <Annotation Term="UI.Facets">
                     <Collection>
@@ -300,7 +308,7 @@
                 <Annotation Term="UI.Facets">
                     <Collection>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Родственники" />
+                            <PropertyValue Property="Label" String="Родственники/cвойственники" />
                             <PropertyValue Property="ID" String="RL" />
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#REL" />
                         </Record>
@@ -798,6 +806,81 @@
                     </Record>
                 </Annotation>
             </Annotations>
+
+   
+
+             <Annotations Target="SAP.ZHR_C_CANDIDATE_RELATIVESType/relat_work">
+                <Annotation Term="Common.Text" Path="to_EnterPriceVH/orgname">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
+
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_ENTERPRICE_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="relat_work"/>
+                                    <PropertyValue Property="ValueListProperty" String="orgname"/>
+                                </Record>
+
+
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Организация"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/type_of_contract">
+                <Annotation Term="Common.Text" Path="to_ContractVH/description">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_TYPECONTRACT_VH" />
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="type_of_contract" />
+                                    <PropertyValue Property="ValueListProperty" String="work_contract" />
+                                </Record>
+                                <Record Type="Common.ValueListParameterDisplayOnly">
+                                    <PropertyValue Property="ValueListProperty" String="description" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_SEMINARType/ftext">
+                <Annotation Term="Common.Text" Path="to_TypeEducationVH/name">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
+
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_TYPEEDUCATION_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true"/>
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="ftext" />
+                                    <PropertyValue Property="ValueListProperty" String="name" />
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Вид обучения"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
 
              
 
