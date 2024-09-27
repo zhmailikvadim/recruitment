@@ -92,26 +92,24 @@
                             <PropertyValue Property="Label" String="Автомобиль" />
                             <PropertyValue Property="ID" String="AUTO1" />
                         </Record>
+                      
                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#DRIVCAT" />
                             <PropertyValue Property="Label" String="Категория водительских прав" />
-                            <PropertyValue Property="Target" AnnotationPath="to_CandidateDriver/@UI.LineItem" />
-                            <PropertyValue Property="ID" String="CATG" />
+                            <PropertyValue Property="ID" String="DRIVCAT1" />
                         </Record>
-                         <Record Type="UI.ReferenceFacet">
+                            <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TRACTCAT" />
                             <PropertyValue Property="Label" String="Категория удостоверения тракториста" />
-                            <PropertyValue Property="Target" AnnotationPath="to_CandidateTractor/@UI.LineItem" />
-                            <PropertyValue Property="ID" String="TRAC" />
+                            <PropertyValue Property="ID" String="TRACTCAT1" />
                         </Record>
+                       
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Label" String="Желаемая профессия" />
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateDesired/@UI.LineItem" />
                             <PropertyValue Property="ID" String="DES" />
                         </Record>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Условия труда" />
-                            <PropertyValue Property="Target" AnnotationPath="to_CandidateWorkCond/@UI.LineItem" />
-                            <PropertyValue Property="ID" String="WORKCO" />
-                        </Record>
+                 
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#WORKCOND" />
                             <PropertyValue Property="Label" String="Условия труда" />
@@ -197,30 +195,6 @@
                 </Annotation>
             </Annotations>
 
-            <Annotations Target="SAP.ZHR_C_CANDIDATE_DRIVERType">
-                <Annotation Term="UI.Facets">
-                    <Collection>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Категория водительских прав" />
-                            <PropertyValue Property="ID" String="PRV" />
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#CATG" />
-                        </Record>
-                    </Collection>
-                </Annotation>
-            </Annotations>
-
-            <Annotations Target="SAP.ZHR_C_CANDIDATE_TRACTORType">
-                <Annotation Term="UI.Facets">
-                    <Collection>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Категория удостоверения" />
-                            <PropertyValue Property="ID" String="PRV1" />
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TRAC" />
-                        </Record>
-                    </Collection>
-                </Annotation>
-            </Annotations>
-
             <Annotations Target="SAP.ZHR_C_CANDIDATE_EDUCATIONType">
                 <Annotation Term="UI.Facets">
                     <Collection>
@@ -268,17 +242,7 @@
 
    
 
-            <Annotations Target="SAP.ZHR_C_WORKING_CONDITIONSType">
-                <Annotation Term="UI.Facets">
-                    <Collection>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Условия труда" />
-                            <PropertyValue Property="ID" String="DWORK" />
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#WCOND" />
-                        </Record>
-                    </Collection>
-                </Annotation>
-            </Annotations>
+    
 
 
             <Annotations Target="SAP.ZHR_C_CANDIDATE_LAST_WORKType">
@@ -580,60 +544,10 @@
                 </Annotation>
             </Annotations>
 
-            <Annotations Target="SAP.ZHR_C_CANDIDATE_DRIVERType/name_category">
-                <Annotation Term="Common.Text" Path="to_CategoryVH/name">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
-                </Annotation>
-                <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
-
-                <Annotation Term="Common.ValueList">
-                    <Record Type="Common.ValueListType">
-                        <PropertyValue Property="CollectionPath" String="ZHR_I_CATEGORY_VH"/>
-                        <PropertyValue Property="SearchSupported" Bool="true"/>
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="name_category" />
-                                    <PropertyValue Property="ValueListProperty" String="name" />
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                        <PropertyValue Property="Label" String="Категория"/>
-                    </Record>
-                </Annotation>
-            </Annotations>
-
-
-
-           <Annotations Target="SAP.ZHR_C_CANDIDATE_TRACTORType/name_category">
-                <Annotation Term="Common.Text" Path="to_TractorVH/name">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
-                </Annotation>
-                <Annotation Term="Common.ValueListWithFixedValues" Bool="true" />
-
-                <Annotation Term="Common.ValueList">
-                    <Record Type="Common.ValueListType">
-                        <PropertyValue Property="CollectionPath" String="ZHR_I_CANDIDATE_TRACTOR_VH"/>
-                        <PropertyValue Property="SearchSupported" Bool="true"/>
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="name_category" />
-                                    <PropertyValue Property="ValueListProperty" String="name" />
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                        <PropertyValue Property="Label" String="Категория удостоверения"/>
-                    </Record>
-                </Annotation>
-            </Annotations>
-
-
-
 
             <Annotations Target="SAP.ZHR_C_CANDIDATE_RELATIVESType/relat_degree">
                 <Annotation Term="Common.Text" Path="to_TypeRelatVH/Description">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
                 </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
 
@@ -684,7 +598,7 @@
 
             <Annotations Target="SAP.ZHR_C_CANDIDATE_FAMILYType/relat_degree">
                 <Annotation Term="Common.Text" Path="to_TypeFamVH/Description">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
                 </Annotation>
                 <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
 
@@ -707,31 +621,7 @@
                 </Annotation>
             </Annotations>
 
-            <Annotations Target="SAP.ZHR_C_WORKING_CONDITIONSType/name_cond">
-                <Annotation Term="Common.Text" Path="to_CondWorkVH/Description">
-                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
-                </Annotation>
-                <Annotation Term="Common.ValueListWithFixedValues" Bool="true"/>
 
-                <Annotation Term="Common.ValueList">
-                    <Record Type="Common.ValueListType">
-                        <PropertyValue Property="CollectionPath" String="ZHR_I_COND_WORK_VH"/>
-                        <PropertyValue Property="SearchSupported" Bool="true"/>
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="name_cond"/>
-                                    <PropertyValue Property="ValueListProperty" String="Description"/>
-                                </Record>
-
-
-
-                            </Collection>
-                        </PropertyValue>
-                        <PropertyValue Property="Label" String="Условия труда"/>
-                    </Record>
-                </Annotation>
-            </Annotations>
 
             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/business_trip">
                 <Annotation Term="Common.Text" Path="to_RelocVH/Name">

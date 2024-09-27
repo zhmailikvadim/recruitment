@@ -74,37 +74,53 @@
                 <Property Name="wc_changeschedule" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Сменный график" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
                 <Property Name="refex" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Ссылка есть" sap:quickinfo="Существуют ссылочные поля (первичные/вторичные затраты)"/>
                 <Property Name="wc_remotework" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Удаленная работа" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="drivcat_a" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория А" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="drivcat_am" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория АM" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="drivcat_b" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория B" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="drivcat_be" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория BE" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="drivcat_c" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория C" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="drivcat_ce" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория CE" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="drivcat_d" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория D" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="drivcat_de" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория DE" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="drivcat_f" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория F" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="ordex" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="ПодтвержденСуществ" sap:quickinfo="Поля подтверждения существуют"/>
+                <Property Name="drivcat_i" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория I" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="tractcat_a" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория A" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="tractcat_b" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория B" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="tractcat_c" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория C" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="tractcat_d" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория D" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="tractcat_e" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория E" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
+                <Property Name="tractcat_f" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="Категория F" sap:quickinfo="Элемент данных для домена BOOLE: TRUE (='X') и FALSE (=' ')"/>
                 <Property Name="rsign" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Соединение" sap:quickinfo="Характеристика соединения"/>
                 <Property Name="relat" Type="Edm.String" MaxLength="3" sap:display-format="UpperCase" sap:label="Соединение/объект" sap:quickinfo="Соединение между объектами" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="istat" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Статус плана" sap:quickinfo="Статус планирования" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="itbld" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="УправлЭкранами" sap:quickinfo="Управление экранами инфо-типа"/>
                 <Property Name="priox" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Приоритет" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="varyf" Type="Edm.String" MaxLength="10" sap:display-format="UpperCase" sap:label="Вариативное поле" sap:quickinfo="Вариативное поле в файле PLOG" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="otype" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Тип объекта" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="objid" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Идентификатор объекта" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="plvar" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Вариант плана" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="created_user_reg" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Имя пользователя" sap:creatable="false" sap:updatable="false"/>
-                <Property Name="ordex" Type="Edm.Boolean" sap:display-format="UpperCase" sap:label="ПодтвержденСуществ" sap:quickinfo="Поля подтверждения существуют"/>
                 <Property Name="created_data_reg" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата" sap:quickinfo="Поле типа DATS" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="changed_user_reg" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Имя пользователя" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="changed_data_reg" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата" sap:quickinfo="Поле типа DATS" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="created_time_reg" Type="Edm.Time" Precision="0" sap:label="Время" sap:quickinfo="Время дня" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="preas" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Причина изменения" sap:quickinfo="Причина изменения основных данных"/>
                 <Property Name="changed_time_reg" Type="Edm.Time" Precision="0" sap:label="Время" sap:quickinfo="Время дня" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="changed_tmstmp_reg" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата" sap:quickinfo="Поле типа DATS" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="useralias" Type="Edm.String" MaxLength="40" sap:display-format="UpperCase" sap:label="Псевдоним для пользователя Интернета" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="password" Type="Edm.String" MaxLength="40" sap:label="Пароль" sap:quickinfo="Новый пароль" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="zhr_user" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Имя пользователя HR" sap:quickinfo="Имя пользователя" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="zsap_user" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Имя пользователя SAP" sap:quickinfo="Имя пользователя" sap:creatable="false" sap:updatable="false"/>
-                <Property Name="itbld" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="УправлЭкранами" sap:quickinfo="Управление экранами инфо-типа"/>
                 <Property Name="created_user" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Кто создал" sap:quickinfo="Имя пользователя" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="created_data" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата создания" sap:quickinfo="Поле типа DATS" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="created_time" Type="Edm.Time" Precision="0" sap:label="Время создания" sap:quickinfo="Время дня" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="created_tmstmp" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата" sap:quickinfo="Поле типа DATS" sap:creatable="false" sap:updatable="false"/>
+                <Property Name="flag1" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Резервное поле/неиспользуемое поле" sap:heading=""/>
                 <Property Name="changed_user" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:label="Кто изменил" sap:quickinfo="Имя пользователя" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="changed_data" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата изменения" sap:quickinfo="Поле типа DATS" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="changed_time" Type="Edm.Time" Precision="0" sap:label="Время изменения" sap:quickinfo="Время дня" sap:creatable="false" sap:updatable="false"/>
                 <Property Name="changed_tmstmp" Type="Edm.DateTime" Precision="0" sap:display-format="Date" sap:label="Дата" sap:quickinfo="Поле типа DATS" sap:creatable="false" sap:updatable="false"/>
-                <Property Name="preas" Type="Edm.String" MaxLength="2" sap:display-format="UpperCase" sap:label="Причина изменения" sap:quickinfo="Причина изменения основных данных"/>
-                <Property Name="flag1" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Резервное поле/неиспользуемое поле" sap:heading=""/>
                 <Property Name="flag2" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Резервное поле/неиспользуемое поле" sap:heading=""/>
                 <Property Name="flag3" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Резервное поле/неиспользуемое поле" sap:heading=""/>
                 <Property Name="pernr" Type="Edm.String" MaxLength="8" sap:display-format="NonNegative" sap:label="Табельный номер" sap:quickinfo="Номер кандидата" sap:creatable="false" sap:updatable="false"/>

@@ -21,7 +21,7 @@ sap.ui.define(['sap/m/MessageToast', 'sap/ui/export/Spreadsheet', 'sap/ui/export
     },
 
     onDetailsLoaded: function (event) {
-      MessageToast.show('onDetailsLoaded invoked.');
+     // MessageToast.show('');
       var sPath = event.context.sPath; // has the context path
 
       var contextObj = event.context.getObject(); //contains the context Object and has all the properties bound in the list report Item
