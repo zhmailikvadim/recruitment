@@ -772,10 +772,19 @@
             </Annotations>
 
 
-             
 
              
-
+                <Annotations Target="SAP.ZHR_C_CANDIDATEHEADER_CDS_Entities/ZHR_C_CANDIDATE_RELATIVESCopy_to_family">
+                    <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
+                        <Record Type="Common.SideEffectsType">
+                            <PropertyValue Property="TargetEntities">
+                                <Collection>
+                                    <NavigationPropertyPath></NavigationPropertyPath>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Annotation>
+                </Annotations>
 
 
 
