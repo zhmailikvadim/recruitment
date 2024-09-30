@@ -132,20 +132,22 @@
                             <PropertyValue Property="ID" String="FAMI" />
                         </Record>
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="to_CandidateFamily/@UI.LineItem" />
-                            <PropertyValue Property="Label" String="Сведения о семье" />
-                            <PropertyValue Property="ID" String="FAMILY" />
-                        </Record>
-                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#REL" />
                             <PropertyValue Property="Label" String="Родственники/свойственники" />
                             <PropertyValue Property="ID" String="RRL" />
                         </Record>
-                        <Record Type="UI.ReferenceFacet">
+                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateRelat/@UI.LineItem" />
                             <PropertyValue Property="Label" String="Сведения о родственниках/свойственниках" />
                             <PropertyValue Property="ID" String="RELAT" />
                         </Record>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateFamily/@UI.LineItem" />
+                            <PropertyValue Property="Label" String="Сведения о семье" />
+                            <PropertyValue Property="ID" String="FAMILY" />
+                        </Record>
+                        
+                       
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#RESP" />
                             <PropertyValue Property="Label" String="Администр./Уголовная Ответств." />
