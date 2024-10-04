@@ -92,30 +92,30 @@
                             <PropertyValue Property="Label" String="Автомобиль" />
                             <PropertyValue Property="ID" String="AUTO1" />
                         </Record>
-                      
+
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#DRIVCAT" />
                             <PropertyValue Property="Label" String="Категория водительских прав" />
                             <PropertyValue Property="ID" String="DRIVCAT1" />
                         </Record>
-                            <Record Type="UI.ReferenceFacet">
+                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#TRACTCAT" />
                             <PropertyValue Property="Label" String="Категория удостоверения тракториста" />
                             <PropertyValue Property="ID" String="TRACTCAT1" />
                         </Record>
-                       
+
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Label" String="Желаемая профессия" />
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateDesired/@UI.LineItem" />
                             <PropertyValue Property="ID" String="DES" />
                         </Record>
-                 
+
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#WORKCOND" />
                             <PropertyValue Property="Label" String="Условия труда" />
                             <PropertyValue Property="ID" String="WORKCOND1" />
                         </Record>
-                      
+
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#SAL" />
                             <PropertyValue Property="Label" String="" />
@@ -136,7 +136,7 @@
                             <PropertyValue Property="Label" String="Родственники/свойственники" />
                             <PropertyValue Property="ID" String="RRL" />
                         </Record>
-                         <Record Type="UI.ReferenceFacet">
+                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateRelat/@UI.LineItem" />
                             <PropertyValue Property="Label" String="Сведения о родственниках/свойственниках" />
                             <PropertyValue Property="ID" String="RELAT" />
@@ -146,8 +146,8 @@
                             <PropertyValue Property="Label" String="Сведения о семье" />
                             <PropertyValue Property="ID" String="FAMILY" />
                         </Record>
-                        
-                       
+
+
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#RESP" />
                             <PropertyValue Property="Label" String="Администр./Уголовная Ответств." />
@@ -242,9 +242,9 @@
                 </Annotation>
             </Annotations>
 
-   
 
-    
+
+
 
 
             <Annotations Target="SAP.ZHR_C_CANDIDATE_LAST_WORKType">
@@ -429,7 +429,7 @@
                                 <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="Description" />
                                 </Record>
-                               
+
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -572,9 +572,9 @@
                 </Annotation>
             </Annotations>
 
-         
 
-              <Annotations Target="SAP.ZHR_C_DESIRED_PROFESSIONType/name_profess">
+
+            <Annotations Target="SAP.ZHR_C_DESIRED_PROFESSIONType/name_profess">
                 <Annotation Term="Common.Text" Path="to_DesiredProfVH/stext">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
                 </Annotation>
@@ -585,8 +585,8 @@
                         <PropertyValue Property="SearchSupported" Bool="true" />
                         <PropertyValue Property="Parameters">
                             <Collection>
-                               
-                                 <Record Type="Common.ValueListParameterInOut">
+
+                                <Record Type="Common.ValueListParameterInOut">
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="name_profess"/>
                                     <PropertyValue Property="ValueListProperty" String="stext"/>
                                 </Record>
@@ -649,7 +649,7 @@
                 </Annotation>
             </Annotations>
 
-             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/business_trip_sever_id">
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/business_trip_sever_id">
                 <Annotation Term="Common.Text" Path="to_SeverVH/Name">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
                 </Annotation>
@@ -673,8 +673,8 @@
                 </Annotation>
             </Annotations>
 
-            
-             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/academic_degree_id">
+
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/academic_degree_id">
                 <Annotation Term="Common.Text" Path="to_DegreeVH/Name">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
                 </Annotation>
@@ -689,7 +689,7 @@
                                     <PropertyValue Property="LocalDataProperty" PropertyPath="academic_degree_id" />
                                     <PropertyValue Property="ValueListProperty" String="Id" />
                                 </Record>
-                               
+
                                 <Record Type="Common.ValueListParameterDisplayOnly">
                                     <PropertyValue Property="ValueListProperty" String="Name" />
                                 </Record>
@@ -699,9 +699,9 @@
                 </Annotation>
             </Annotations>
 
-   
 
-             <Annotations Target="SAP.ZHR_C_CANDIDATE_RELATIVESType/relat_work">
+
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_RELATIVESType/relat_work">
                 <Annotation Term="Common.Text" Path="to_EnterPriceVH/orgname">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
                 </Annotation>
@@ -726,7 +726,7 @@
                 </Annotation>
             </Annotations>
 
-              <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/type_of_contract">
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/type_of_contract">
                 <Annotation Term="Common.Text" Path="to_ContractVH/description">
                     <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly" />
                 </Annotation>
@@ -772,24 +772,22 @@
                     </Record>
                 </Annotation>
             </Annotations>
-
-
-
-             
-                <Annotations Target="SAP.ZHR_C_CANDIDATEHEADER_CDS_Entities/ZHR_C_CANDIDATE_RELATIVESCopy_to_family">
-                    <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects">
-                        <Record Type="Common.SideEffectsType">
-                            <PropertyValue Property="TargetEntities">
-                                <Collection>
-                                    <NavigationPropertyPath></NavigationPropertyPath>
-                                </Collection>
-                            </PropertyValue>
-                        </Record>
-                    </Annotation>
-                </Annotations>
-
-
-
+            <Annotations Target="SAP.ZHR_C_CANDIDATEHEADER_CDS_Entities/ZHR_C_CANDIDATEHEADER">
+                <Annotation Term="com.sap.vocabularies.Common.v1.SideEffects" Qualifier="ReferenceFacet">
+                    <Record Type="Common.SideEffectsType">
+                        <PropertyValue Property="SourceProperties">
+                            <Collection>
+                                <PropertyPath>to_CandidateRelat/Copy_to_family_ac</PropertyPath>
+                            </Collection>
+                        </PropertyValue>                        
+                        <PropertyValue Property="TargetEntities">
+                            <Collection>
+                                <NavigationPropertyPath>to_CandidateFamily</NavigationPropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

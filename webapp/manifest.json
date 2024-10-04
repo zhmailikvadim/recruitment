@@ -1,258 +1,257 @@
 {
-    "_version": "1.59.0",
-    "sap.app": {
-        "id": "recruitment",
-        "type": "application",
-        "i18n": "i18n/i18n.properties",
-        "applicationVersion": {
-            "version": "0.0.1"
-        },
-        "title": "{{appTitle}}",
-        "description": "{{appDescription}}",
-        "resources": "resources.json",
-        "sourceTemplate": {
-            "id": "@sap/generator-fiori:lrop",
-            "version": "1.13.2",
-            "toolsId": "cc20537e-d558-471c-91aa-d8c67b80dd3c"
-        },
-        "dataSources": {
-            "mainService": {
-                "uri": "/sap/opu/odata/sap/ZHR_C_CANDIDATEHEADER_CDS/",
-                "type": "OData",
-                "settings": {
-                    "annotations": [
-                        "ZHR_C_CANDIDATEHEADER_CDS_VAN",
-                        "annotation"
-                    ],
-                    "localUri": "localService/metadata.xml",
-                    "odataVersion": "2.0"
-                }
-            },
-            "ZHR_C_CANDIDATEHEADER_CDS_VAN": {
-                "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZHR_C_CANDIDATEHEADER_CDS_VAN',Version='0001')/$value/",
-                "type": "ODataAnnotation",
-                "settings": {
-                    "localUri": "localService/ZHR_C_CANDIDATEHEADER_CDS_VAN.xml"
-                }
-            },
-            "annotation": {
-                "type": "ODataAnnotation",
-                "uri": "annotations/annotation.xml",
-                "settings": {
-                    "localUri": "annotations/annotation.xml"
-                }
-            }
-        }
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "recruitment",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
     },
-    "sap.ui": {
-        "technology": "UI5",
-        "icons": {
-            "icon": "",
-            "favIcon": "",
-            "phone": "",
-            "phone@2": "",
-            "tablet": "",
-            "tablet@2": ""
-        },
-        "deviceTypes": {
-            "desktop": true,
-            "tablet": true,
-            "phone": true
-        }
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.13.2",
+      "toolsId": "cc20537e-d558-471c-91aa-d8c67b80dd3c"
     },
-    "sap.ui5": {
-        "flexEnabled": true,
-        "dependencies": {
-            "minUI5Version": "1.125.1",
-            "libs": {
-                "sap.m": {},
-                "sap.ui.core": {},
-                "sap.ushell": {},
-                "sap.f": {},
-                "sap.ui.comp": {},
-                "sap.ui.generic.app": {},
-                "sap.suite.ui.generic.template": {}
-            }
-        },
-        "contentDensities": {
-            "compact": true,
-            "cozy": true
-        },
-        "models": {
-            "i18n": {
-                "type": "sap.ui.model.resource.ResourceModel",
-                "settings": {
-                    "bundleName": "recruitment.i18n.i18n"
-                }
-            },
-            "": {
-                "dataSource": "mainService",
-                "preload": true,
-                "settings": {
-                    "defaultBindingMode": "TwoWay",
-                    "defaultCountMode": "Inline",
-                    "refreshAfterChange": true,
-                    "metadataUrlParams": {
-                        "sap-value-list": "none"
-                    }
-                }
-            },
-            "@i18n": {
-                "type": "sap.ui.model.resource.ResourceModel",
-                "uri": "i18n/i18n.properties"
-            },
-            "i18n|sap.suite.ui.generic.template.ObjectPage|ZHR_C_CANDIDATEHEADER": {
-                "type": "sap.ui.model.resource.ResourceModel",
-                "settings": {
-                    "bundleName": "recruitment.i18n.ObjectPage.i18n"
-                }
-            }
-        },
-        "resources": {
-            "css": []
-        },
-        "routing": {
-            "config": {},
-            "routes": [],
-            "targets": {}
-        },
-        "extends": {
-            "extensions": {
-                "sap.ui.controllerExtensions": {
-                    "sap.suite.ui.generic.template.ObjectPage.view.Details": {
-                        "controllerName": "recruitment.ext.controller.ObjectPageExt",
-                        "sap.ui.generic.app": {
-                            "ZHR_C_CANDIDATEHEADER": {
-                                "EntitySet": "ZHR_C_CANDIDATEHEADER",
-                                "Header": {
-                                    "Actions": {
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    },
-    "sap.ui.generic.app": {
-        "_version": "1.3.0",
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZHR_C_CANDIDATEHEADER_CDS/",
+        "type": "OData",
         "settings": {
-            "forceGlobalRefresh": true,
-            "objectPageHeaderType": "Dynamic",
-            "considerAnalyticalParameters": true,
-            "showDraftToggle": true
+          "annotations": ["ZHR_C_CANDIDATEHEADER_CDS_VAN", "annotation"],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      },
+      "ZHR_C_CANDIDATEHEADER_CDS_VAN": {
+        "uri": "/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Annotations(TechnicalName='ZHR_C_CANDIDATEHEADER_CDS_VAN',Version='0001')/$value/",
+        "type": "ODataAnnotation",
+        "settings": {
+          "localUri": "localService/ZHR_C_CANDIDATEHEADER_CDS_VAN.xml"
+        }
+      },
+      "annotation": {
+        "type": "ODataAnnotation",
+        "uri": "annotations/annotation.xml",
+        "settings": {
+          "localUri": "annotations/annotation.xml"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.125.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ushell": {},
+        "sap.f": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.suite.ui.generic.template": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "recruitment.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "defaultCountMode": "Inline",
+          "refreshAfterChange": true,
+          "metadataUrlParams": {
+            "sap-value-list": "none"
+          }
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      },
+      "i18n|sap.suite.ui.generic.template.ObjectPage|ZHR_C_CANDIDATEHEADER": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "recruitment.i18n.ObjectPage.i18n"
+        }
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [],
+      "targets": {}
+    },
+    "extends": {
+      "extensions": {
+        "sap.ui.controllerExtensions": {
+          "sap.suite.ui.generic.template.ObjectPage.view.Details": {
+            "controllerName": "recruitment.ext.controller.ObjectPageExt",
+            "sap.ui.generic.app": {
+              "ZHR_C_CANDIDATEHEADER": {
+                "EntitySet": "ZHR_C_CANDIDATEHEADER",
+                "Header": {
+                  "Actions": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.ui.generic.app": {
+    "_version": "1.3.0",
+    "settings": {
+      "forceGlobalRefresh": true,
+      "objectPageHeaderType": "Dynamic",
+      "considerAnalyticalParameters": true,
+      "showDraftToggle": true
+    },
+    "pages": {
+      "ListReport|ZHR_C_CANDIDATEHEADER": {
+        "entitySet": "ZHR_C_CANDIDATEHEADER",
+        "component": {
+          "name": "sap.suite.ui.generic.template.ListReport",
+          "list": true,
+          "settings": {
+            "condensedTableLayout": true,
+            "smartVariantManagement": true,
+            "dataLoadSettings": {
+              "loadDataOnAppLaunch": "always"
+            },
+            "enableTableFilterInPageVariant": true,
+            "filterSettings": {
+              "dateSettings": {
+                "useDateRange": true
+              }
+            }
+          }
         },
         "pages": {
-            "ListReport|ZHR_C_CANDIDATEHEADER": {
-                "entitySet": "ZHR_C_CANDIDATEHEADER",
+          "ObjectPage|ZHR_C_CANDIDATEHEADER": {
+            "entitySet": "ZHR_C_CANDIDATEHEADER",
+            "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
+            "component": {
+              "name": "sap.suite.ui.generic.template.ObjectPage"
+            },
+            "pages": {
+              "ObjectPage|ZHR_C_CANDIDATE_EDUCATION": {
                 "component": {
-                    "name": "sap.suite.ui.generic.template.ListReport",
-                    "list": true,
-                    "settings": {
-                        "condensedTableLayout": true,
-                        "smartVariantManagement": true,
-                        "enableTableFilterInPageVariant": true,
-                        "filterSettings": {
-                            "dateSettings": {
-                                "useDateRange": true
-                            }
-                        }
-                    }
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
                 },
-                "pages": {
-                    "ObjectPage|ZHR_C_CANDIDATEHEADER": {
-                        "entitySet": "ZHR_C_CANDIDATEHEADER",
-                        "defaultLayoutTypeIfExternalNavigation": "MidColumnFullScreen",
-                        "component": {
-                            "name": "sap.suite.ui.generic.template.ObjectPage"
-                        },
-                        "pages": {
-                            "ObjectPage|ZHR_C_CANDIDATE_EDUCATION": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_CANDIDATE_EDUCATION",
-                                "navigationProperty": "to_CandidateEducation"
-                            },
-                            "ObjectPage|ZHR_C_CANDIDATE_SEMINAR": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_CANDIDATE_SEMINAR",
-                                "navigationProperty": "to_CandidateSeminar"
-                            },
-                            "ObjectPage|ZHR_C_CANDIDATE_LANGUAGE": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_CANDIDATE_LANGUAGE",
-                                "navigationProperty": "to_CandidateLanguage"
-                            },
-                            "ObjectPage|ZHR_C_CANDIDATE_PROFRECOM": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_CANDIDATE_PROFRECOM",
-                                "navigationProperty": "to_CandidateProfRecom"
-                            },
-                            "ObjectPage|ZHR_C_CANDIDATE_LAST_WORK": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_CANDIDATE_LAST_WORK",
-                                "navigationProperty": "to_CandidateLastWork"
-                            },
-                            "ObjectPage|ZHR_C_CANDIDATE_RELATIVES": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_CANDIDATE_RELATIVES",
-                                "navigationProperty": "to_CandidateRelat"
-                            },
-                            "ObjectPage|ZHR_C_CANDIDATE_FAMILY": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_CANDIDATE_FAMILY",
-                                "navigationProperty": "to_CandidateFamily"
-                            },
-                            "ObjectPage|ZHR_C_CANDIDATE_DRIVER": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_CANDIDATE_DRIVER",
-                                "navigationProperty": "to_CandidateDriver"
-                            },
-                            "ObjectPage|ZHR_C_DESIRED_PROFESSION": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_DESIRED_PROFESSION",
-                                "navigationProperty": "to_CandidateDesired"
-                            },
-                            "ObjectPage|ZHR_C_WORKING_CONDITIONS": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_WORKING_CONDITIONS",
-                                "navigationProperty": "to_CandidateWorkCond"
-                            },
-                            "ObjectPage|ZHR_C_CANDIDATE_TRACTOR": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_CANDIDATE_TRACTOR",
-                                "navigationProperty": "to_CandidateTractor"
-                            }
-                        }
-                    }
-                }
+                "entitySet": "ZHR_C_CANDIDATE_EDUCATION",
+                "navigationProperty": "to_CandidateEducation"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_SEMINAR": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_SEMINAR",
+                "navigationProperty": "to_CandidateSeminar"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_LANGUAGE": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_LANGUAGE",
+                "navigationProperty": "to_CandidateLanguage"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_PROFRECOM": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_PROFRECOM",
+                "navigationProperty": "to_CandidateProfRecom"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_LAST_WORK": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_LAST_WORK",
+                "navigationProperty": "to_CandidateLastWork"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_RELATIVES": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_RELATIVES",
+                "navigationProperty": "to_CandidateRelat"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_FAMILY": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_FAMILY",
+                "navigationProperty": "to_CandidateFamily"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_DRIVER": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_DRIVER",
+                "navigationProperty": "to_CandidateDriver"
+              },
+              "ObjectPage|ZHR_C_DESIRED_PROFESSION": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_DESIRED_PROFESSION",
+                "navigationProperty": "to_CandidateDesired"
+              },
+              "ObjectPage|ZHR_C_WORKING_CONDITIONS": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_WORKING_CONDITIONS",
+                "navigationProperty": "to_CandidateWorkCond"
+              },
+              "ObjectPage|ZHR_C_CANDIDATE_TRACTOR": {
+                "component": {
+                  "name": "sap.suite.ui.generic.template.ObjectPage"
+                },
+                "entitySet": "ZHR_C_CANDIDATE_TRACTOR",
+                "navigationProperty": "to_CandidateTractor"
+              }
             }
+          }
         }
-    },
-    "sap.fiori": {
-        "registrationIds": [],
-        "archeType": "transactional"
+      }
     }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
 }
