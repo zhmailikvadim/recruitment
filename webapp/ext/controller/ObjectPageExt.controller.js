@@ -12,6 +12,7 @@ sap.ui.define(['sap/m/MessageToast', 'sap/ui/export/Spreadsheet', 'sap/ui/export
     },
 
     onAfterRendering: function () {
+      this.byId("listReportFilter-btnGo").firePress();
       console.log('onAfterRendering');
     },
 

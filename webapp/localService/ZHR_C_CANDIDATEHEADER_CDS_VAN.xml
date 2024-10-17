@@ -538,16 +538,25 @@
                         <PropertyValue Property="Data">
                             <Collection>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="wc_vahta"/>
+                                    <PropertyValue Property="Value" Path="wc_fullday"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="wc_flexsched"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="wc_retraining"/>
+                                    <PropertyValue Property="Value" Path="wc_changeschedule"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="wc_housecompens"/>
+                                    <PropertyValue Property="Value" Path="wc_vahta"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="wc_remotework"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="wc_remote_combine_work"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="wc_remote_traveling_work"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="wc_tripabroad"/>
@@ -559,19 +568,13 @@
                                     <PropertyValue Property="Value" Path="wc_forwhile"/>
                                 </Record>
                                 <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="wc_fullday"/>
+                                    <PropertyValue Property="Value" Path="wc_housecompens"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="wc_parttimenot"/>
                                 </Record>
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="wc_lastsever"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="wc_changeschedule"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="wc_remotework"/>
                                 </Record>
                             </Collection>
                         </PropertyValue>
@@ -642,91 +645,6 @@
                         <PropertyPath>nachn</PropertyPath>
                         <PropertyPath>vorna</PropertyPath>
                         <PropertyPath>nach2</PropertyPath>
-                    </Collection>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType/ActiveUUID">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType/HasActiveEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType/HasDraftEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType/IsActiveEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType/id_category">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType/DraftEntityCreationDateTime">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType/DraftEntityLastChangeDateTime">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType/Preparation_ac">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType/Validation_ac">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType/name_category_fc">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_DRIVERType">
-                <Annotation Term="UI.FieldGroup" Qualifier="CATG">
-                    <Record>
-                        <PropertyValue Property="Data">
-                            <Collection>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="name_category"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="id_category"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-                <Annotation Term="UI.HeaderInfo">
-                    <Record>
-                        <PropertyValue Property="TypeName" String="Категория"/>
-                        <PropertyValue Property="TypeNamePlural" String="Категория"/>
-                        <PropertyValue Property="Title">
-                            <Record Type="UI.DataField">
-                                <PropertyValue Property="Label" String="Категория"/>
-                            </Record>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-                <Annotation Term="UI.LineItem">
-                    <Collection>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Категория"/>
-                            <PropertyValue Property="Value" Path="name_category"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Код Категории"/>
-                            <PropertyValue Property="Value" Path="id_category"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
                     </Collection>
                 </Annotation>
             </Annotations>
@@ -1440,80 +1358,6 @@
                     </Collection>
                 </Annotation>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_TRACTORType/ActiveUUID">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_TRACTORType/HasActiveEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_TRACTORType/HasDraftEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_TRACTORType/IsActiveEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_TRACTORType/id_category">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_TRACTORType/DraftEntityCreationDateTime">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_TRACTORType/DraftEntityLastChangeDateTime">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_TRACTORType/Preparation_ac">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_TRACTORType/Validation_ac">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_TRACTORType/name_category_fc">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_TRACTORType">
-                <Annotation Term="UI.FieldGroup" Qualifier="TRAC">
-                    <Record>
-                        <PropertyValue Property="Data">
-                            <Collection>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="name_category"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="id_category"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-                <Annotation Term="UI.LineItem">
-                    <Collection>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Категория удостоверения"/>
-                            <PropertyValue Property="Value" Path="name_category"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Код Категории удостоверения"/>
-                            <PropertyValue Property="Value" Path="id_category"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                    </Collection>
-                </Annotation>
-            </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_DESIRED_PROFESSIONType/ActiveUUID">
                 <Annotation Term="UI.HiddenFilter"/>
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
@@ -1695,16 +1539,6 @@
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_BUSIN_TRIP_VHType">
-                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_CANDIDATE_TRACTOR_VHType">
-                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_CATEGORY_VHType/id">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_CATEGORY_VHType">
                 <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COMPUTER_LEVEL_VHType/Id">
