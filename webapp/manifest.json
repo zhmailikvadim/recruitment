@@ -125,8 +125,7 @@
                             "ZHR_C_CANDIDATEHEADER": {
                                 "EntitySet": "ZHR_C_CANDIDATEHEADER",
                                 "Header": {
-                                    "Actions": {
-                                    }
+                                    "Actions": {}
                                 }
                             }
                         }
@@ -143,9 +142,10 @@
             "considerAnalyticalParameters": true,
             "showDraftToggle": true,
             "inboundParameters": {
-				"paramCreate": {
-					"useForCreate": true
-				}}
+                "paramCreate": {
+                    "useForCreate": true
+                }
+            }
         },
         "pages": {
             "ListReport|ZHR_C_CANDIDATEHEADER": {
@@ -154,11 +154,12 @@
                     "name": "sap.suite.ui.generic.template.ListReport",
                     "list": true,
                     "settings": {
-                        "initialLoad":true,
+                        "initialLoad": true,
                         "condensedTableLayout": true,
                         "smartVariantManagement": true,
                         "dataLoadSettings": {
-                            "loadDataOnAppLaunch": "always" },
+                            "loadDataOnAppLaunch": "always"
+                        },
                         "enableTableFilterInPageVariant": true,
                         "filterSettings": {
                             "dateSettings": {
@@ -231,13 +232,6 @@
                                 "entitySet": "ZHR_C_CANDIDATE_DRIVER",
                                 "navigationProperty": "to_CandidateDriver"
                             },
-                            "ObjectPage|ZHR_C_DESIRED_PROFESSION": {
-                                "component": {
-                                    "name": "sap.suite.ui.generic.template.ObjectPage"
-                                },
-                                "entitySet": "ZHR_C_DESIRED_PROFESSION",
-                                "navigationProperty": "to_CandidateDesired"
-                            },
                             "ObjectPage|ZHR_C_WORKING_CONDITIONS": {
                                 "component": {
                                     "name": "sap.suite.ui.generic.template.ObjectPage"
@@ -251,6 +245,13 @@
                                 },
                                 "entitySet": "ZHR_C_CANDIDATE_TRACTOR",
                                 "navigationProperty": "to_CandidateTractor"
+                            },
+                            "ObjectPage|ZHR_C_CANDIDATE_DESIRED_PROF": {
+                                "component": {
+                                    "name": "sap.suite.ui.generic.template.ObjectPage"
+                                },
+                                "entitySet": "ZHR_C_CANDIDATE_DESIRED_PROF",
+                                "navigationProperty": "to_CandidateDesProf"
                             }
                         }
                     }
