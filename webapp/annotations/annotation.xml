@@ -105,7 +105,7 @@
                         </Record>
 
                         <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Желаемая профессия" />
+                            <PropertyValue Property="Label" String="Желаемая профессия/должность" />
                             <PropertyValue Property="Target" AnnotationPath="to_CandidateDesProf/@UI.LineItem" />
                             <PropertyValue Property="ID" String="DES" />
                         </Record>
@@ -315,6 +315,30 @@
                                 </Record>
                             </Collection>
                         </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_DESIRED_PROFType/name_profess">
+                <Annotation Term="Common.Text" Path="to_DesiredProfVH/stext">
+                    <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+                <Annotation Term="Common.ValueListWithFixedValues" Bool="false"/>
+                <Annotation Term="Common.ValueList">
+                    <Record Type="Common.ValueListType">
+                        <PropertyValue Property="CollectionPath" String="ZHR_I_DESIRED_PROFES_VH"/>
+                        <PropertyValue Property="SearchSupported" Bool="true" />
+                        <PropertyValue Property="Parameters">
+                            <Collection>
+
+                                <Record Type="Common.ValueListParameterInOut">
+                                    <PropertyValue Property="LocalDataProperty" PropertyPath="name_profess"/>
+                                    <PropertyValue Property="ValueListProperty" String="stext"/>
+                                </Record>
+
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Label" String="Профессия"/>
                     </Record>
                 </Annotation>
             </Annotations>

@@ -596,11 +596,6 @@
                 </Annotation>
                 <Annotation Term="UI.LineItem">
                     <Collection>
-                        <Record Type="UI.DataFieldForAction">
-                            <PropertyValue Property="Label" String="Забыл пароль"/>
-                            <PropertyValue Property="Action" String="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATEHEADER_CDS_Entities/AF300A2BA6A01B0Send_credentials_to_email"/>
-                            <PropertyValue Property="InvocationGrouping" EnumMember="UI.OperationGroupingType/Isolated"/>
-                        </Record>
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Value" Path="nachn"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
@@ -697,9 +692,6 @@
                                 <Record Type="UI.DataField">
                                     <PropertyValue Property="Value" Path="comment_prof"/>
                                 </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="ready_study"/>
-                                </Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
@@ -725,11 +717,6 @@
                         <Record Type="UI.DataField">
                             <PropertyValue Property="Label" String="Комментарий"/>
                             <PropertyValue Property="Value" Path="comment_prof"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Label" String="Готов обучаться"/>
-                            <PropertyValue Property="Value" Path="ready_study"/>
                             <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
                         </Record>
                     </Collection>
@@ -1445,85 +1432,6 @@
                     </Collection>
                 </Annotation>
             </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType/ActiveUUID">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType/HasActiveEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType/HasDraftEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType/IsActiveEntity">
-                <Annotation Term="UI.HiddenFilter"/>
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType/condid">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType/DraftEntityCreationDateTime">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType/DraftEntityLastChangeDateTime">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType/Preparation_ac">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType/Validation_ac">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_WORKING_CONDITIONSType">
-                <Annotation Term="UI.FieldGroup" Qualifier="WCOND">
-                    <Record>
-                        <PropertyValue Property="Data">
-                            <Collection>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="name_cond"/>
-                                </Record>
-                                <Record Type="UI.DataField">
-                                    <PropertyValue Property="Value" Path="condid"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-                <Annotation Term="UI.HeaderInfo">
-                    <Record>
-                        <PropertyValue Property="TypeName" String="Условия труда"/>
-                        <PropertyValue Property="TypeNamePlural" String="Условия труда"/>
-                        <PropertyValue Property="Title">
-                            <Record Type="UI.DataField">
-                                <PropertyValue Property="Label" String="Условия труда"/>
-                            </Record>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-                <Annotation Term="UI.LineItem">
-                    <Collection>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="name_cond"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                        <Record Type="UI.DataField">
-                            <PropertyValue Property="Value" Path="condid"/>
-                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                        </Record>
-                    </Collection>
-                </Annotation>
-            </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_BUSIN_TRIP_VHType/WorkContract">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
@@ -1536,13 +1444,6 @@
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COMPUTER_LEVEL_VHType">
-                <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COND_WORK_VHType/conid">
-                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
-                <Annotation Term="UI.Hidden"/>
-            </Annotations>
-            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COND_WORK_VHType">
                 <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_COUNTRY_VHType/land1">
@@ -1558,6 +1459,10 @@
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_DEGREE_VHType">
                 <Annotation Term="UI.TextArrangement" EnumMember="UI.TextArrangementType/TextFirst"/>
+            </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_DESIRED_PROFES_VHType/id">
+                <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
+                <Annotation Term="UI.Hidden"/>
             </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_EDUC_TYPE_VHType/ID">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
