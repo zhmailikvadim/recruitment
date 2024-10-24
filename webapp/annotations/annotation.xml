@@ -111,6 +111,12 @@
                         </Record>
 
                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Вакансии" />
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateVacanc/@UI.LineItem" />
+                            <PropertyValue Property="ID" String="VACAN" />
+                        </Record>
+
+                        <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#WORKCOND" />
                             <PropertyValue Property="Label" String="Условия труда" />
                             <PropertyValue Property="ID" String="WORKCOND1" />
@@ -131,7 +137,13 @@
                             <PropertyValue Property="Label" String="Семейное положение" />
                             <PropertyValue Property="ID" String="FAMI" />
                         </Record>
+                      
                         <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Target" AnnotationPath="to_CandidateFamily/@UI.LineItem" />
+                            <PropertyValue Property="Label" String="Сведения о семье" />
+                            <PropertyValue Property="ID" String="FAMILY" />
+                        </Record>
+                      <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#REL" />
                             <PropertyValue Property="Label" String="Родственники/свойственники" />
                             <PropertyValue Property="ID" String="RRL" />
@@ -141,12 +153,6 @@
                             <PropertyValue Property="Label" String="Сведения о родственниках/свойственниках" />
                             <PropertyValue Property="ID" String="RELAT" />
                         </Record>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Target" AnnotationPath="to_CandidateFamily/@UI.LineItem" />
-                            <PropertyValue Property="Label" String="Сведения о семье" />
-                            <PropertyValue Property="ID" String="FAMILY" />
-                        </Record>
-
 
                         <Record Type="UI.ReferenceFacet">
                             <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#RESP" />
@@ -231,6 +237,18 @@
                     </Collection>
                 </Annotation>
             </Annotations>
+            <Annotations Target="SAP.ZHR_C_CANDIDATE_VACANCIESType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Вакансии" />
+                            <PropertyValue Property="ID" String="VACAN" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#VAC" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+
             <Annotations Target="SAP.ZHR_C_CANDIDATE_LANGUAGEType">
                 <Annotation Term="UI.Facets">
                     <Collection>
@@ -271,6 +289,17 @@
                     </Collection>
                 </Annotation>
             </Annotations>
+               <Annotations Target="SAP.ZHR_C_CANDIDATE_FAMILYType">
+                <Annotation Term="UI.Facets">
+                    <Collection>
+                        <Record Type="UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Семья" />
+                            <PropertyValue Property="ID" String="FAMILY" />
+                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#FAML" />
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
 
             <Annotations Target="SAP.ZHR_C_CANDIDATE_RELATIVESType">
                 <Annotation Term="UI.Facets">
@@ -283,17 +312,7 @@
                     </Collection>
                 </Annotation>
             </Annotations>
-            <Annotations Target="SAP.ZHR_C_CANDIDATE_FAMILYType">
-                <Annotation Term="UI.Facets">
-                    <Collection>
-                        <Record Type="UI.ReferenceFacet">
-                            <PropertyValue Property="Label" String="Семья" />
-                            <PropertyValue Property="ID" String="FAMILY" />
-                            <PropertyValue Property="Target" AnnotationPath="@UI.FieldGroup#FAML" />
-                        </Record>
-                    </Collection>
-                </Annotation>
-            </Annotations>
+         
 
             <Annotations Target="SAP.ZHR_C_CANDIDATEHEADERType/educ_type_numc">
                 <Annotation Term="Common.Text" Path="to_EducTypeVH/Description">

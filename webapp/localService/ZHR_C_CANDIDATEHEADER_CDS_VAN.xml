@@ -1482,6 +1482,55 @@
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>
             </Annotations>
+            <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_C_CANDIDATE_VACANCIESType">
+                <Annotation Term="UI.FieldGroup" Qualifier="VAC">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="name_vacans"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="address"/>
+                                </Record>
+                                <Record Type="UI.DataField">
+                                    <PropertyValue Property="Value" Path="enterprise"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Вакансии"/>
+                        <PropertyValue Property="TypeNamePlural" String="Вакансии"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="UI.DataField">
+                                <PropertyValue Property="Label" String="Вакансии"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="UI.LineItem">
+                    <Collection>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Вакансия"/>
+                            <PropertyValue Property="Value" Path="name_vacans"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Адрес"/>
+                            <PropertyValue Property="Value" Path="address"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="UI.DataField">
+                            <PropertyValue Property="Label" String="Предприятие"/>
+                            <PropertyValue Property="Value" Path="enterprise"/>
+                            <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+            </Annotations>
             <Annotations Target="ZHR_C_CANDIDATEHEADER_CDS.ZHR_I_BUSIN_TRIP_VHType/WorkContract">
                 <Annotation Term="Common.FieldControl" EnumMember="Common.FieldControlType/Hidden"/>
                 <Annotation Term="UI.Hidden"/>

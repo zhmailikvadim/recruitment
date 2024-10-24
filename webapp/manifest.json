@@ -252,6 +252,13 @@
                                 },
                                 "entitySet": "ZHR_C_CANDIDATE_DESIRED_PROF",
                                 "navigationProperty": "to_CandidateDesProf"
+                            },
+                            "ObjectPage|ZHR_C_CANDIDATE_VACANCIES": {
+                                "component": {
+                                    "name": "sap.suite.ui.generic.template.ObjectPage"
+                                },
+                                "entitySet": "ZHR_C_CANDIDATE_VACANCIES",
+                                "navigationProperty": "to_CandidateVacanc"
                             }
                         }
                     }

@@ -467,9 +467,9 @@
                 <Property Name="Validation_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="uuid" Type="Edm.Guid" Nullable="false" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
                 <Property Name="uuid_candidate" Type="Edm.Guid" sap:label="Key" sap:quickinfo="UUID serving as key (parent key, root key)"/>
-                <Property Name="name_vacans" Type="Edm.String" MaxLength="250" sap:label="Вакансии"/>
+                <Property Name="name_vacans" Type="Edm.String" MaxLength="250" sap:label="Вакансия" sap:quickinfo="Вакансии"/>
                 <Property Name="address" Type="Edm.String" MaxLength="250" sap:label="Адрес"/>
-                <Property Name="enterprise" Type="Edm.String" MaxLength="250" sap:label="Комментарий"/>
+                <Property Name="enterprise" Type="Edm.String" MaxLength="250" sap:label="Предприятие" sap:quickinfo="Комментарий"/>
                 <Property Name="ActiveUUID" Type="Edm.Guid" sap:label="Key"/>
                 <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата создания черновика"/>
                 <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Дата последнего изменения черновика"/>
